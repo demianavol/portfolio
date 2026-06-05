@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCOUT MINI - компактный outdoor арбалет-пистолет</title>
+    <meta
+      name="description"
+      content="SCOUT MINI: компактный арбалет-пистолет с металлическим корпусом, рычажным взводом, планкой Вивер и возможностью использования для боуфишинга."
+    />
+    <script>
+      (() => {
+        if (location.pathname.includes("scout-mini") || location.pathname.includes("arbalet-scout-mini")) {
+          document.documentElement.dataset.theme = "dark";
+          return;
+        }
+        try {
+          const savedTheme = localStorage.getItem("rezerv-theme");
+          document.documentElement.dataset.theme = savedTheme || "dark";
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="analytics.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="scout-mini-motion.js" defer></script>
+  </head>
+  <body data-page="scout-mini" data-price-mode="retail">
+    <div class="scout-scroll-progress" aria-hidden="true"><span></span></div>
+    <header class="site-header scout-header">
+      <a class="brand" href="#top" aria-label="SCOUT MINI">
+        <span class="brand-mark">SM</span>
+        <span>
+          <strong>SCOUT MINI</strong>
+          <small>Premium outdoor gear</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a class="active" href="#advantages">Преимущества</a>
+        <a href="#engineering">Инженерия</a>
+        <a href="#specs">Характеристики</a>
+        <a href="#video">Видео</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="secondary-btn scout-catalog-link" href="/catalog">Каталог</a>
+        <a class="header-cta" href="#contacts">Получить предложение</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="scout-hero" aria-label="SCOUT MINI">
+        <div class="scout-ambient" aria-hidden="true"></div>
+        <div class="shell scout-hero-inner">
+          <div class="scout-hero-copy" data-reveal>
+            <p class="eyebrow">Compact outdoor crossbow</p>
+            <h1>SCOUT MINI</h1>
+            <p>
+              Компактный арбалет-пистолет с металлическим корпусом, рычажным
+              взводом и возможностью использования для боуфишинга.
+            </p>
+            <div class="scout-proof-strip" aria-label="Ключевые показатели">
+              <span>900 г</span>
+              <span>80 lbs / 36 кг</span>
+              <span>до 50 м/с</span>
+              <span>20-25 м</span>
+            </div>
+            <div class="scout-hero-actions">
+              <a class="primary-btn" href="#contacts">Оставить заявку</a>
+              <a class="secondary-btn" href="#contacts">Получить предложение</a>
+            </div>
+          </div>
+
+          <div class="scout-product-stage" data-motion-device data-reveal>
+            <img
+              src="assets/scout-mini-hero-product.jpg"
+              alt="SCOUT MINI на дымчатом фоне"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+
+        <div class="shell scout-metric-grid" aria-label="Главные характеристики">
+          <article data-reveal>
+            <strong>900 г</strong>
+            <span>компактный вес для выездов и тренировок</span>
+          </article>
+          <article data-reveal>
+            <strong>36 кг</strong>
+            <span>сила натяжения 80 lbs</span>
+          </article>
+          <article data-reveal>
+            <strong>50 м/с</strong>
+            <span>скорость для спортивной точности</span>
+          </article>
+          <article data-reveal>
+            <strong>20-25 м</strong>
+            <span>прицельная дистанция</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section scout-section" id="advantages">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Ключевые преимущества</p>
+              <h2>Маленький формат, серьёзная инженерия</h2>
+            </div>
+          </div>
+          <div class="scout-benefit-grid">
+            <article data-reveal>
+              <span>01</span>
+              <h3>Металлический корпус</h3>
+              <p>Жёсткая основа, матовое покрытие и ощущение цельного outdoor-инструмента.</p>
+            </article>
+            <article data-reveal>
+              <span>02</span>
+              <h3>Рычажный взвод</h3>
+              <p>Механизм помогает подготовить изделие к тренировочному выстрелу без лишней суеты.</p>
+            </article>
+            <article data-reveal>
+              <span>03</span>
+              <h3>Планка Вивер</h3>
+              <p>Открывает возможность поставить совместимые прицельные аксессуары.</p>
+            </article>
+            <article data-reveal>
+              <span>04</span>
+              <h3>Автоматический предохранитель</h3>
+              <p>Встроенная система безопасности для более контролируемой эксплуатации.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="scout-story" id="engineering" data-story>
+        <div class="scout-story-mark" aria-hidden="true">precision</div>
+        <div class="shell scout-story-shell">
+          <div class="scout-story-copy">
+            <article class="scout-story-step active" data-story-step="0" data-reveal>
+              <span>01 / Компактность и мощность</span>
+              <h2>Готов к маршруту, тренировке и подарку</h2>
+              <p>Длина около 50 см и вес 900 г делают SCOUT MINI удобным для перевозки, хранения и выездов на природу.</p>
+            </article>
+            <article class="scout-story-step" data-story-step="1" data-reveal>
+              <span>02 / Металлический корпус</span>
+              <h2>Холодный металл, плотная сборка, уверенный хват</h2>
+              <p>Корпус и механизм взвода выполнены из металла, а фактурная рукоять помогает удерживать изделие стабильно.</p>
+            </article>
+            <article class="scout-story-step" data-story-step="2" data-reveal>
+              <span>03 / Рычажный взвод</span>
+              <h2>Механика, которую приятно чувствовать</h2>
+              <p>Рычажная схема упрощает взвод и подчёркивает инженерный характер компактного формата.</p>
+            </article>
+            <article class="scout-story-step" data-story-step="3" data-reveal>
+              <span>04 / Боуфишинг</span>
+              <h2>Совместим с гарпунами и катушкой</h2>
+              <p>SCOUT MINI можно использовать с подходящими гарпунами и катушкой для боуфишинга там, где это разрешено.</p>
+            </article>
+          </div>
+
+          <div class="scout-story-visual" data-motion-device data-reveal>
+            <img class="active" src="assets/scout-mini-smoke-4.jpg" alt="SCOUT MINI в компактном ракурсе" />
+            <img src="assets/scout-mini-smoke-3.jpg" alt="Металлический корпус SCOUT MINI" />
+            <img src="assets/scout-mini-smoke-5.jpg" alt="Планка Вивер и прицельный узел SCOUT MINI" />
+            <img src="assets/scout-mini-smoke-6.jpg" alt="Прицельные элементы SCOUT MINI" />
+            <div class="scout-scan-line" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scout-section scout-spec-section" id="specs">
+        <div class="shell scout-split">
+          <div data-reveal>
+            <p class="eyebrow">Характеристики</p>
+            <h2>Параметры для точного понимания продукта</h2>
+            <p class="scout-lead">
+              SCOUT MINI рассчитан на спортивную стрельбу, активный отдых и
+              прикладные outdoor-сценарии с аккуратной, ответственной эксплуатацией.
+            </p>
+          </div>
+          <dl class="scout-specs" data-reveal>
+            <div><span class="scout-spec-icon" aria-hidden="true">⚖️</span><dt>Вес</dt><dd>900 г</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">⚙️</span><dt>Сила натяжения</dt><dd>80 lbs / 36 кг</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">⚡</span><dt>Скорость</dt><dd>до 50 м/с</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">🎯</span><dt>Дальность</dt><dd>20-25 м</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">📏</span><dt>Длина</dt><dd>50 см</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">↔️</span><dt>Ширина</dt><dd>44 см</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">↕️</span><dt>Высота</dt><dd>15 см</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">🧭</span><dt>Ход тетивы</dt><dd>14 см</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">🔩</span><dt>Корпус</dt><dd>металл</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">▰</span><dt>Планка</dt><dd>Вивер</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">🛡️</span><dt>Безопасность</dt><dd>автопредохранитель</dd></div>
+            <div><span class="scout-spec-icon" aria-hidden="true">🌊</span><dt>Боуфишинг</dt><dd>гарпуны и катушка</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section scout-section scout-kit-section" id="kit">
+        <div class="shell scout-split">
+          <div data-reveal>
+            <p class="eyebrow">Комплектация</p>
+            <h2>В коробке всё для первого знакомства</h2>
+            <p class="scout-lead">
+              Комплект закрывает базовую сборку, обслуживание тетивы и настройку изделия.
+            </p>
+          </div>
+          <div class="scout-kit-list" data-reveal>
+            <span><span class="scout-kit-icon" aria-hidden="true">🎯</span>Арбалет SCOUT MINI</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">🏹</span>Плечи</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">〰️</span>Тетива</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">⚡</span>10 стрел</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">▰</span>Планка Вивера</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">🧰</span>Натяжитель тетивы</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">🕯️</span>Воск для тетивы</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">🔧</span>Шестигранники</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">◼️</span>Уплотнители</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">🔩</span>Законцовки плеч</span>
+            <span><span class="scout-kit-icon" aria-hidden="true">📘</span>Правила эксплуатации</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scout-section" id="gallery">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Галерея</p>
+              <h2>Детали, металл и дымчатая подача</h2>
+            </div>
+          </div>
+          <div class="scout-gallery">
+            <figure class="wide" data-reveal>
+              <img src="assets/scout-mini-smoke-2.jpg" alt="Комплектация SCOUT MINI" loading="lazy" />
+            </figure>
+            <figure class="focus-top" data-reveal>
+              <img src="assets/scout-mini-smoke-5.jpg" alt="Планка Вивер SCOUT MINI" loading="lazy" />
+            </figure>
+            <figure data-reveal>
+              <img src="assets/scout-mini-smoke-7.jpg" alt="Рукоять SCOUT MINI" loading="lazy" />
+            </figure>
+            <figure data-reveal>
+              <img src="assets/scout-mini-smoke-6.jpg" alt="Прицельные элементы SCOUT MINI" loading="lazy" />
+            </figure>
+            <figure class="tall" data-reveal>
+              <img src="assets/scout-mini-smoke-4.jpg" alt="Технические характеристики SCOUT MINI" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scout-section scout-video-section" id="video">
+        <div class="shell scout-video-layout">
+          <div data-reveal>
+            <p class="eyebrow">Видео</p>
+            <h2>Посмотрите продукт в движении</h2>
+            <p class="scout-lead">
+              Короткий cinematic-обзор для первого впечатления и большой обзор для детального изучения.
+            </p>
+          </div>
+          <div class="scout-video-frame" data-reveal>
+            <video controls preload="metadata" poster="assets/scout-mini-cover.jpg">
+              <source src="assets/scout-mini-review-short.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="shell scout-video-grid">
+          <article data-reveal>
+            <video controls preload="metadata" poster="assets/scout-mini-smoke-4.jpg">
+              <source src="assets/scout-mini-review-full.mp4" type="video/mp4" />
+            </video>
+            <strong>Большой обзор SCOUT MINI</strong>
+          </article>
+          <article class="scout-video-note" data-reveal>
+            <span class="scout-note-kicker">Крупный план</span>
+            <h3>Металл, планка и механика без лишнего шума</h3>
+            <p>
+              Тёмная фурнитура, открытый прицел, планка Вивера и рычажный взвод собраны в компактный outdoor-формат.
+            </p>
+            <div class="scout-note-points" aria-label="Акценты конструкции">
+              <span><b>Вивер</b><small>для совместимой оптики</small></span>
+              <span><b>Металл</b><small>корпус и механизм взвода</small></span>
+              <span><b>Контроль</b><small>автоматический предохранитель</small></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section scout-section scout-safety-section" id="safety">
+        <div class="shell scout-split">
+          <div data-reveal>
+            <p class="eyebrow">Безопасность</p>
+            <h2>Спокойная эксплуатация начинается с правил</h2>
+          </div>
+          <div class="scout-safety-list" data-reveal>
+            <article>
+              <span>🎯</span>
+              <div>
+                <h3>Только спорт и outdoor</h3>
+                <p>Используйте изделие для спортивной стрельбы, тренировок и разрешённых сценариев.</p>
+              </div>
+            </article>
+            <article>
+              <span>↗</span>
+              <div>
+                <h3>Проверяйте направление</h3>
+                <p>Перед запуском оцените дистанцию, цель и свободную зону вокруг неё.</p>
+              </div>
+            </article>
+            <article>
+              <span>🛡️</span>
+              <div>
+                <h3>Держите контроль</h3>
+                <p>Не направляйте изделие на людей, животных и неподходящие объекты.</p>
+              </div>
+            </article>
+            <article>
+              <span>🔒</span>
+              <div>
+                <h3>Безопасное хранение</h3>
+                <p>Храните SCOUT MINI и стрелы отдельно, вне доступа детей.</p>
+              </div>
+            </article>
+            <article>
+              <span>📍</span>
+              <div>
+                <h3>Местные правила</h3>
+                <p>Учитывайте правила перевозки, использования и аксессуаров для боуфишинга.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scout-section scout-faq-section" id="faq">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">FAQ</p>
+              <h2>Коротко о главном</h2>
+            </div>
+          </div>
+          <div class="scout-faq-grid">
+            <article data-reveal>
+              <h3>Какая прицельная дальность?</h3>
+              <p>Ориентир - 20-25 м при корректной сборке, подходящих стрелах и безопасной тренировочной зоне.</p>
+            </article>
+            <article data-reveal>
+              <h3>Насколько он компактный?</h3>
+              <p>Вес около 900 г, длина около 50 см. Формат рассчитан на удобную перевозку и хранение.</p>
+            </article>
+            <article data-reveal>
+              <h3>Зачем рычажный взвод?</h3>
+              <p>Он делает подготовку более контролируемой и подчёркивает инженерную механику модели.</p>
+            </article>
+            <article data-reveal>
+              <h3>Можно ли использовать для боуфишинга?</h3>
+              <p>Да, модель совместима с подходящими гарпунами и катушкой для разрешённых сценариев боуфишинга.</p>
+            </article>
+            <article data-reveal>
+              <h3>Что входит в комплект?</h3>
+              <p>SCOUT MINI, плечи, тетива, 10 стрел, планка Вивера, натяжитель, воск, ключи и инструкция.</p>
+            </article>
+            <article data-reveal>
+              <h3>Есть ли предохранитель?</h3>
+              <p>Да, предусмотрен автоматический предохранитель. Его важно использовать вместе с базовыми правилами безопасности.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scout-contact-section" id="contacts">
+        <div class="shell scout-contact-layout" data-reveal>
+          <div class="scout-contact-copy">
+            <p class="eyebrow">Заявка</p>
+            <h2>Получите предложение по SCOUT MINI</h2>
+            <p>
+              Оставьте контакт, если хотите уточнить наличие, комплектацию,
+              условия покупки или совместимые аксессуары для outdoor-сценариев.
+            </p>
+            <div class="scout-contact-points" aria-label="Что уточним">
+              <span>Наличие</span>
+              <span>Комплектация</span>
+              <span>Аксессуары</span>
+            </div>
+          </div>
+
+          <form class="lead-form" id="leadForm">
+            <label>
+              <span>Имя</span>
+              <input type="text" name="name" placeholder="Ваше имя" required />
+            </label>
+            <label>
+              <span>Телефон или мессенджер</span>
+              <input type="text" name="contact" placeholder="+7 ..." required />
+            </label>
+            <label class="wide">
+              <span>Тема обращения</span>
+              <select name="format">
+                <option>SCOUT MINI / получить предложение</option>
+                <option>SCOUT MINI / вопрос перед покупкой</option>
+                <option>Нужна консультация по комплектации</option>
+                <option>Интересуют гарпуны и катушка</option>
+              </select>
+            </label>
+            <label class="wide">
+              <span>Комментарий</span>
+              <textarea name="products" rows="5">SCOUT MINI / получить предложение</textarea>
+            </label>
+            <button class="primary-btn wide" type="submit">Оставить заявку</button>
+            <p class="form-note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <a class="scout-mobile-cta" href="#contacts">Получить предложение</a>
+  </body>
+</html>

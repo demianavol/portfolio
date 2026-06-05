@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REZERV - розница в разработке</title>
+    <meta name="description" content="Розничный каталог REZERV временно находится в разработке." />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("rezerv-theme");
+          document.documentElement.dataset.theme = savedTheme || "dark";
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="analytics.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="retail" data-price-mode="retail">
+    <header class="site-header">
+      <a class="brand" href="/catalog" aria-label="REZERV">
+        <span class="brand-mark">R</span>
+        <span>
+          <strong>REZERV</strong>
+          <small>Розница в разработке</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="/catalog">Главная</a>
+        <a href="/dr-mix">Dr. Mix</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Включить светлую тему"
+          aria-pressed="true"
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-knob"></span>
+          </span>
+        </button>
+        <a class="secondary-btn auth-link" data-auth-link href="auth.html">Войти</a>
+        <a class="header-cta" href="/dr-mix">Dr. Mix</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="minimal-hero">
+        <div class="shell minimal-hero-inner">
+          <p class="eyebrow">Розница</p>
+          <h1>Раздел находится в разработке</h1>
+          <p class="section-lead">Мы обновляем каталог, цены и карточки товаров. Сейчас доступна страница Dr. Mix.</p>
+          <div class="dr-hero-actions">
+            <a class="primary-btn" href="/dr-mix">Перейти к Dr. Mix</a>
+            <a class="secondary-btn" href="/catalog">На главную</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quote-section" id="contacts">
+        <div class="shell quote-layout">
+          <div class="quote-copy">
+            <p class="eyebrow">Уведомление</p>
+            <h2>Сообщим, когда розница откроется</h2>
+            <p>Оставьте контакт, если хотите получить уведомление о запуске розничного каталога.</p>
+            <div class="contact-list" data-contact-list></div>
+          </div>
+
+          <form class="lead-form" id="leadForm">
+            <label>
+              <span>Имя</span>
+              <input type="text" name="name" placeholder="Ваше имя" required />
+            </label>
+            <label>
+              <span>Телефон или мессенджер</span>
+              <input type="text" name="contact" placeholder="+7 ..." required />
+            </label>
+            <label class="wide">
+              <span>Формат покупки</span>
+              <select name="format">
+                <option>Интересует розница</option>
+              </select>
+            </label>
+            <button class="primary-btn wide" type="submit">Сообщить о запуске</button>
+            <p class="form-note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Mix - машинка для детской смеси</title>
+    <meta
+      name="description"
+      content="Dr. Mix: автоматическая машинка для приготовления детской молочной смеси за 10 секунд с точной температурой."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (() => {
+        document.documentElement.dataset.theme = "light";
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="analytics.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="dr-mix-motion.js" defer></script>
+  </head>
+  <body data-page="dr-mix" data-price-mode="retail">
+    <div class="dr-scroll-progress" aria-hidden="true"><span></span></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Dr. Mix">
+        <span class="brand-mark">Dr</span>
+        <span>
+          <strong>Dr. Mix</strong>
+          <small>Для спокойного кормления</small>
+        </span>
+      </a>
+
+      <nav class="main-nav dr-nav-groups" aria-label="Навигация Dr. Mix">
+        <details class="dr-nav-group">
+          <summary class="dr-nav-group-trigger">Обзор</summary>
+          <div class="dr-nav-menu">
+            <a href="#experience">Как работает</a>
+            <a href="#video">Видео</a>
+          </div>
+        </details>
+        <details class="dr-nav-group">
+          <summary class="dr-nav-group-trigger">Проблема</summary>
+          <div class="dr-nav-menu">
+            <a href="#partnership">Проблема</a>
+            <a href="#customer">Решение</a>
+            <a href="#audience">Задачи</a>
+          </div>
+        </details>
+        <details class="dr-nav-group">
+          <summary class="dr-nav-group-trigger">Продукт</summary>
+          <div class="dr-nav-menu">
+            <a href="#product">Возможности</a>
+            <a href="#kit">Комплект</a>
+            <a href="#comparison">Сравнение</a>
+          </div>
+        </details>
+        <details class="dr-nav-group">
+          <summary class="dr-nav-group-trigger">Доставка</summary>
+          <div class="dr-nav-menu">
+            <a href="#delivery">Ozon и СДЭК</a>
+            <a href="#payment">Оплата</a>
+          </div>
+        </details>
+        <details class="dr-nav-group">
+          <summary class="dr-nav-group-trigger">Доверие</summary>
+          <div class="dr-nav-menu">
+            <a href="#testimonials">Отзывы</a>
+            <a href="#faq">Вопросы</a>
+          </div>
+        </details>
+        <details class="dr-nav-group">
+          <summary class="dr-nav-group-trigger">Связь</summary>
+          <div class="dr-nav-menu">
+            <a href="#contacts">Контакты</a>
+            <a href="#contacts">Поддержка</a>
+          </div>
+        </details>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Включить светлую тему"
+          aria-pressed="true"
+        >
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-knob"></span>
+          </span>
+        </button>
+        <a class="secondary-btn auth-link" data-auth-link data-auth-mode="login" href="#auth">Войти</a>
+        <a class="header-cta" href="#payment">Купить</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="dr-hero">
+        <div class="shell dr-hero-inner">
+          <div class="dr-hero-copy" data-reveal>
+            <p class="eyebrow">Dr. Mix для родителей</p>
+            <h1><span>Идеальная</span> <span>смесь</span> <span>Одним нажатием</span></h1>
+            <p>Dr. Mix автоматически готовит детскую смесь нужной температуры и консистенции за считанные секунды.</p>
+            <div class="dr-proof-strip" aria-label="Ключевые причины купить">
+              <span>35-70°C</span>
+              <span>1,5 л</span>
+              <span>24 мес</span>
+            </div>
+            <div class="dr-hero-actions">
+              <a class="primary-btn" href="#payment">Купить Dr. Mix</a>
+              <a class="secondary-btn" href="#experience">Как работает</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="shell dr-metric-grid" aria-label="Доверие к Dr. Mix">
+          <div class="dr-metric" data-reveal>
+            <strong>Премиум</strong>
+            <span>качество материалов</span>
+          </div>
+          <div class="dr-metric" data-reveal>
+            <strong>4.9/5</strong>
+            <span>оценка родителей</span>
+          </div>
+          <div class="dr-metric" data-reveal>
+            <strong>24 мес</strong>
+            <span>официальная гарантия</span>
+          </div>
+          <div class="dr-metric" data-reveal>
+            <strong>10 сек</strong>
+            <span>смесь готова</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dr-story" id="experience" data-story>
+        <div class="dr-story-billboard" aria-hidden="true">
+          <span>night</span>
+          <span>feed</span>
+          <span>calm</span>
+        </div>
+        <div class="shell dr-story-head" data-reveal>
+          <p class="eyebrow">Как работает</p>
+          <h2>Готовая смесь без ночной суеты</h2>
+          <p class="dr-lead">
+            Dr. Mix ведёт кормление по понятному сценарию: вода, температура,
+            дозировка и подача в бутылочку остаются под контролем.
+          </p>
+        </div>
+        <div class="shell dr-story-shell">
+          <div class="dr-story-copy" aria-label="Как работает Dr. Mix">
+            <article class="dr-story-step active" data-story-step="0" data-reveal>
+              <span>01</span>
+              <h2>Ребёнок проснулся - смесь уже готовится</h2>
+              <p>Не нужно кипятить воду, остужать и трясти бутылочку. Dr. Mix делает порцию автоматически.</p>
+            </article>
+            <article class="dr-story-step" data-story-step="1" data-reveal>
+              <span>02</span>
+              <h2>Температура задаётся точно</h2>
+              <p>Диапазон 35-70°C помогает подобрать комфортную температуру под смесь и привычный режим кормления.</p>
+            </article>
+            <article class="dr-story-step" data-story-step="2" data-reveal>
+              <span>03</span>
+              <h2>Меньше суеты ночью</h2>
+              <p>Бутылочка стоит на поддоне, подсветка мягкая, а порция получается без комочков и лишних пузырьков.</p>
+            </article>
+            <article class="dr-story-step" data-story-step="3" data-reveal>
+              <span>04</span>
+              <h2>Готов к ежедневным кормлениям</h2>
+              <p>Резервуар 1,5 л, контейнер для смеси 400 г, режим очистки и гарантия 24 месяца.</p>
+            </article>
+          </div>
+
+          <div class="dr-story-visual" data-motion-device aria-label="Фото Dr. Mix DM1">
+            <div class="dr-phone-frame">
+              <div class="dr-photo-stack">
+                <img class="active" src="assets/dr-mix-luxury-detail-front.png" alt="Dr. Mix готовит смесь быстрее, чем вы проснётесь" />
+                <img src="assets/dr-mix-luxury-detail-water.png" alt="Резервуар Dr. Mix для воды 1,5 литра" />
+                <img src="assets/dr-mix-luxury-product-main.png" alt="Dr. Mix умная машина для современных родителей" />
+                <img src="assets/dr-mix-luxury-product-alt.png" alt="Dr. Mix для ежедневного кормления" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-video-section" id="video">
+        <div class="shell dr-video-layout">
+          <div data-reveal>
+            <p class="eyebrow">Видео</p>
+            <h2>Покажем весь процесс за несколько коротких роликов</h2>
+            <p class="dr-lead">
+              Один наглядный сценарий: бутылочка под соплом, выбор объёма и
+              готовая тёплая смесь без ручного смешивания.
+            </p>
+          </div>
+          <div class="dr-video-frame" data-reveal data-video-slot aria-label="Видео Dr. Mix на экране телефона">
+            <video class="dr-phone-video" autoplay muted loop playsinline preload="metadata" poster="assets/dr-mix-listing-cover.jpg">
+              <source src="assets/dr-mix-video-review.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="shell dr-video-grid" aria-label="Видео Dr. Mix">
+          <article class="dr-video-card" data-reveal>
+            <div class="dr-video-phone">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/dr-mix-listing-fast.jpg">
+                <source src="assets/dr-mix-video-blog-1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <strong>Приготовление за 10 секунд</strong>
+          </article>
+          <article class="dr-video-card" data-reveal>
+            <div class="dr-video-phone">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/dr-mix-listing-water.jpg">
+                <source src="assets/dr-mix-video-blog-2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <strong>Невозможно оторваться</strong>
+          </article>
+          <article class="dr-video-card" data-reveal>
+            <div class="dr-video-phone">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/dr-mix-listing-smart.jpg">
+                <source src="assets/dr-mix-video-blog-3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <strong>Dr. Mix в быту</strong>
+          </article>
+          <article class="dr-video-card" data-reveal>
+            <div class="dr-video-phone">
+              <video autoplay muted loop playsinline preload="metadata" poster="assets/dr-mix-listing-support.jpg">
+                <source src="assets/dr-mix-video-care.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <strong>Уход и эксплуатация</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="dr-infographic-strip" aria-label="Инфографика Dr. Mix">
+        <div class="shell dr-infographic-head" data-reveal>
+          <p class="eyebrow">Обзор устройства</p>
+          <h2>Dr. Mix со всех сторон</h2>
+        </div>
+        <div class="shell dr-infographic-gallery">
+          <img src="assets/dr-mix-luxury-detail-front.png" alt="Dr. Mix - умная машинка для современных родителей" loading="lazy" />
+          <img src="assets/dr-mix-luxury-detail-water.png" alt="Резервуар для воды Dr. Mix" loading="lazy" />
+          <img src="assets/dr-mix-luxury-detail-side.png" alt="Детали Dr. Mix" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="section dr-section" id="partnership">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Проблема</p>
+              <h2>Каждая минута важна, <span>когда малыш ждёт</span></h2>
+            </div>
+          </div>
+
+          <div class="dr-card-grid three">
+            <article class="dr-card" data-reveal>
+              <span class="dr-card-number">01</span>
+              <h3>Кипятить воду</h3>
+              <p>И ждать, пока она остынет до нужной температуры.</p>
+            </article>
+            <article class="dr-card" data-reveal>
+              <span class="dr-card-number">02</span>
+              <h3>Отмерять смесь</h3>
+              <p>Рискуя ошибиться в пропорциях ночью или в спешке.</p>
+            </article>
+            <article class="dr-card" data-reveal>
+              <span class="dr-card-number">03</span>
+              <h3>Трясти бутылочку</h3>
+              <p>И все равно бороться с комочками и лишними пузырьками.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-problem-section" id="customer">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Конечному покупателю</p>
+              <h2>Проблема превращается в простое действие</h2>
+            </div>
+          </div>
+
+          <div class="dr-problem-grid">
+            <article data-reveal>
+              <span>Устали смешивать руками?</span>
+              <strong>Машина делает порцию за 10 секунд.</strong>
+            </article>
+            <article data-reveal>
+              <span>Ночные кормления?</span>
+              <strong>Мягкая подсветка, не надо кипятить воду и остужать.</strong>
+            </article>
+            <article data-reveal>
+              <span>Страх ошибиться с температурой?</span>
+              <strong>Нагрев с точностью до градуса, без перегрева.</strong>
+            </article>
+            <article data-reveal>
+              <span>Комочки и пузырьки?</span>
+              <strong>Воронка смешивает смесь однородно.</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-use-cases-section" id="audience">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Задачи</p>
+              <h2>Какие задачи помогает решать Dr. Mix</h2>
+              <p class="dr-lead">
+                Dr. Mix создан для того, чтобы сделать ежедневные кормления более спокойными,
+                точными и комфортными — как для ребенка, так и для родителей.
+              </p>
+            </div>
+          </div>
+
+          <div class="dr-use-case-grid">
+            <article class="dr-use-case-card" data-reveal>
+              <span>01</span>
+              <h3>Недостаточная лактация у мамы</h3>
+              <p>
+                Помогает быстро и точно готовить адаптированную смесь, когда грудного молока
+                недостаточно для полноценного питания ребенка.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>02</span>
+              <h3>Недостаточный набор веса, недоношенность или рождение двойни</h3>
+              <p>
+                Точное соблюдение пропорций смеси особенно важно для малышей, которым необходим
+                стабильный режим питания и контроль набора массы тела.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>03</span>
+              <h3>Строгие ограничения при грудном вскармливании</h3>
+              <p>
+                Упрощает организацию смешанного или искусственного вскармливания и помогает снизить
+                физическую и эмоциональную нагрузку на маму.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>04</span>
+              <h3>Колики, газообразование и дискомфорт после кормления</h3>
+              <p>
+                Технология равномерного смешивания помогает уменьшить количество пузырьков воздуха
+                и сделать кормление более комфортным для ребенка.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>05</span>
+              <h3>Болезненность грудного вскармливания</h3>
+              <p>
+                Помогает снизить нагрузку при мастите, трещинах сосков, повышенной чувствительности
+                груди и других сложностях грудного вскармливания.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>06</span>
+              <h3>Когда кормление важно доверить близким</h3>
+              <p>
+                Папа, бабушка, няня или другие члены семьи смогут быстро и правильно приготовить
+                смесь благодаря простому и понятному управлению.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>07</span>
+              <h3>Ночные кормления и хроническая усталость родителей</h3>
+              <p>
+                Dr. Mix помогает сократить время приготовления смеси ночью и уменьшить стресс,
+                связанный с ежедневными кормлениями.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>08</span>
+              <h3>Повышенная тревожность родителей за качество приготовления смеси</h3>
+              <p>
+                Автоматическая система дозировки помогает соблюдать точные пропорции воды,
+                температуры и смеси при каждом кормлении.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>09</span>
+              <h3>Необходимость поддерживать высокий уровень гигиены</h3>
+              <p>
+                Система автоматической очистки и проточный нагрев воды помогают поддерживать чистоту
+                устройства и уменьшают риск образования остатков смеси внутри системы.
+              </p>
+            </article>
+            <article class="dr-use-case-card" data-reveal>
+              <span>10</span>
+              <h3>Практичный и полезный подарок семье с новорожденным</h3>
+              <p>
+                Dr. Mix — это современное решение, которое помогает облегчить ежедневный уход за
+                ребенком с первых дней жизни.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-split-section" id="product">
+        <div class="shell dr-split">
+          <div data-reveal>
+            <p class="eyebrow">Возможности</p>
+            <h2>Всё для <span>спокойствия</span> родителей</h2>
+            <p class="dr-lead">
+              Dr. Mix берёт на себя рутину: нагрев воды, дозировку, смешивание и
+              подачу в бутылочку.
+            </p>
+          </div>
+
+          <div class="dr-spec-panel" data-reveal>
+            <dl class="dr-specs">
+              <div>
+                <dt>Температура</dt>
+                <dd>35-70°C</dd>
+              </div>
+              <div>
+                <dt>Объем воды</dt>
+                <dd>30-240 мл</dd>
+              </div>
+              <div>
+                <dt>Мощность</dt>
+                <dd>2200 Вт</dd>
+              </div>
+              <div>
+                <dt>Резервуар</dt>
+                <dd>1,5 л</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="shell dr-feature-grid">
+          <article class="dr-feature" data-reveal>
+            <h3>Три режима</h3>
+            <p>«Молоко», «Вода» и «Очистка» для кормления, подогрева и ухода.</p>
+          </article>
+          <article class="dr-feature" data-reveal>
+            <h3>Сенсорное управление</h3>
+            <p>LED-подсветка, блокировка от детей, память последних настроек.</p>
+          </article>
+          <article class="dr-feature" data-reveal>
+            <h3>Компактный корпус</h3>
+            <p>Белый корпус с чёрными акцентами выглядит аккуратно дома.</p>
+          </article>
+          <article class="dr-feature" data-reveal>
+            <h3>Контроль статуса</h3>
+            <p>Индикаторы неполадок помогают быстро понять, что требует внимания.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-lifestyle-section">
+        <div class="shell dr-lifestyle-layout">
+          <div data-reveal>
+            <p class="eyebrow">Премиальный опыт</p>
+            <h2>Технология <span>для жизни</span></h2>
+            <p class="dr-lead">
+              Dr. Mix органично вписывается в современную кухню, превращая каждое
+              кормление в простой и спокойный момент.
+            </p>
+            <div class="dr-lifestyle-stats">
+              <span><strong>10с</strong> Приготовление</span>
+              <span><strong>35-70°C</strong> Температура</span>
+              <span><strong>1.5л</strong> Объём</span>
+            </div>
+          </div>
+          <figure data-reveal>
+            <img src="assets/dr-mix-luxury-hero.png" alt="Dr. Mix в интерьере современной кухни" loading="lazy" />
+            <figcaption>Компактный корпус аккуратно стоит на кухне, а настройки кормления остаются под рукой.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section dr-section" id="wholesale-value">
+        <div class="shell dr-two-column">
+          <div data-reveal>
+            <p class="eyebrow">Спокойствие</p>
+            <h2>Особенно выручает ночью и в загруженные дни</h2>
+          </div>
+          <div class="dr-list" data-reveal>
+            <p>Не нужно будить кухню кипятком, мерными ложками и долгим охлаждением.</p>
+            <p>Стабильная температура помогает не перегреть смесь.</p>
+            <p>Однородное смешивание уменьшает комочки в бутылочке.</p>
+            <p>Последние настройки сохраняются для следующего кормления.</p>
+            <p>Официальная гарантия 24 месяца и инструкция на русском языке.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-kit-section" id="kit">
+        <div class="shell dr-split">
+          <div data-reveal>
+            <p class="eyebrow">Комплектация</p>
+            <h2>В коробке всё для старта</h2>
+            <p class="dr-lead">
+              Аппарат приезжает с основными аксессуарами, русской инструкцией и
+              гарантийными документами.
+            </p>
+          </div>
+          <div class="dr-kit-panel" data-reveal>
+            <div class="dr-kit-list">
+              <span>Аппарат Dr. Mix, проверенный перед отправкой</span>
+              <span>Контейнер для смеси 400 г</span>
+              <span>Резервуар для воды 1,5 л</span>
+              <span>Воронка и запасное сопло</span>
+              <span>Поддон с регулировкой, кабель питания</span>
+              <span>Инструкция на русском языке</span>
+              <span>Сертификат соответствия и гарантийный талон</span>
+            </div>
+            <div class="dr-kit-trust" aria-label="Надежность комплектации">
+              <span><strong>24 месяца</strong> гарантии</span>
+              <span><strong>Русская</strong> инструкция</span>
+              <span><strong>Проверка</strong> комплекта</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-delivery-section" id="delivery">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Доставка</p>
+              <h2>Два понятных способа <span>получения</span></h2>
+              <p class="dr-lead">
+                Способ доставки выбирается в блоке оплаты. Для Ozon Логистики доставка
+                включается в сумму заказа, для СДЭК стоимость рассчитывается индивидуально.
+              </p>
+            </div>
+          </div>
+
+          <div class="dr-delivery-grid">
+            <article class="dr-delivery-card" data-reveal>
+              <span>01</span>
+              <h3>Ozon Логистика</h3>
+              <p>
+                Выбирается при оформлении заказа. Оплата доставки Ozon Логистикой
+                включена в сумму заказа, а номер телефона должен совпадать с личным
+                кабинетом Ozon.
+              </p>
+              <a class="secondary-btn" href="#payment">Выбрать при оплате</a>
+            </article>
+            <article class="dr-delivery-card" data-reveal>
+              <span>02</span>
+              <h3>СДЭК</h3>
+              <p>
+                Выбирается при оформлении заказа. Укажите данные для доставки СДЭК,
+                а стоимость мы рассчитаем индивидуально и согласуем перед отправкой.
+              </p>
+              <a class="secondary-btn" href="#payment">Выбрать СДЭК при оплате</a>
+            </article>
+            <article class="dr-delivery-card dr-delivery-card-wide" data-reveal>
+              <span>03</span>
+              <h3>Что указать для СДЭК</h3>
+              <div class="dr-delivery-data">
+                <strong>ФИО получателя</strong>
+                <strong>Телефон для связи</strong>
+                <strong>Город доставки</strong>
+                <strong>Адрес или код ПВЗ СДЭК</strong>
+                <strong>Количество Dr. Mix</strong>
+                <strong>Удобный способ связи</strong>
+              </div>
+            </article>
+            <article class="dr-delivery-card dr-delivery-card-wide" data-reveal>
+              <span>04</span>
+              <h3>Проверка при получении</h3>
+              <p>
+                При получении сразу проверьте комплектацию и целостность товара.
+                Если что-то не так, сразу передайте заказ обратно курьеру или сотруднику ПВЗ.
+                Если заказ уже забрали, напишите в поддержку на сайте.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-stats-section">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Цифры говорят сами</p>
+              <h2>Почему родители <span>любят</span> Dr. Mix</h2>
+            </div>
+          </div>
+          <div class="dr-stats-grid">
+            <article data-reveal><strong>98%</strong><span>довольных родителей</span></article>
+            <article data-reveal><strong>10с</strong><span>приготовление смеси</span></article>
+            <article data-reveal><strong>24</strong><span>месяца гарантии</span></article>
+            <article data-reveal><strong>1.5л</strong><span>резервуар воды</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-comparison-section" id="comparison">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Сравнение</p>
+              <h2>Dr. Mix на фоне <span>популярных альтернатив</span></h2>
+              <p class="dr-lead">
+                В последней колонке — обезличенный популярный автоматический аналог:
+                без названия бренда, но с публичными числовыми характеристиками.
+              </p>
+            </div>
+          </div>
+
+          <div class="dr-comparison-table-wrap" data-reveal>
+            <table class="dr-comparison-table">
+              <thead>
+                <tr>
+                  <th>Критерий</th>
+                  <th>Dr. Mix</th>
+                  <th>Ручное приготовление</th>
+                  <th>Подогреватель бутылочек</th>
+                  <th>Популярный автоматический аналог</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Скорость</th>
+                  <td>Готовит порцию примерно за 10 секунд</td>
+                  <td>Нужно кипятить, остужать и смешивать вручную</td>
+                  <td>Подогревает, но не готовит смесь</td>
+                  <td>В обзорах указывают до 30 секунд</td>
+                </tr>
+                <tr>
+                  <th>Температура</th>
+                  <td>Настройка 35-70°C</td>
+                  <td>Температуру приходится проверять отдельно</td>
+                  <td>Поддерживает нагрев бутылочки</td>
+                  <td>3 фиксированных температурных режима</td>
+                </tr>
+                <tr>
+                  <th>Смешивание</th>
+                  <td>Автоматическая подача воды и смеси</td>
+                  <td>Есть риск комочков и лишних пузырьков</td>
+                  <td>Не смешивает сухую смесь</td>
+                  <td>Нужен подбор режима под конкретную смесь</td>
+                </tr>
+                <tr>
+                  <th>Ночные кормления</th>
+                  <td>Минимум действий сонного родителя</td>
+                  <td>Много ручных шагов на кухне</td>
+                  <td>Помогает с температурой, но не с дозировкой</td>
+                  <td>60-300 мл, интерфейс и шаги зависят от модели</td>
+                </tr>
+                <tr>
+                  <th>Поддержка и гарантия</th>
+                  <td>Консультация, русская инструкция и гарантия 24 месяца</td>
+                  <td>Нет единого устройства и поддержки</td>
+                  <td>Гарантия зависит от конкретной модели</td>
+                  <td>Обычно 1 год гарантии у популярной модели</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-testimonials-section" id="testimonials">
+        <div class="shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="eyebrow">Отзывы</p>
+              <h2>Спокойные ночи <span>начинаются с простоты</span></h2>
+            </div>
+          </div>
+          <div class="dr-testimonial-grid">
+            <article data-reveal>
+              <div class="dr-testimonial-head">
+                <span class="dr-testimonial-avatar" aria-hidden="true">М</span>
+                <span class="dr-testimonial-stars">★★★★★</span>
+              </div>
+              <p>“Ночью больше не нужно кипятить воду и ждать. Нажали кнопку — бутылочка готова.”</p>
+              <strong>Мама новорожденного</strong>
+            </article>
+            <article data-reveal>
+              <div class="dr-testimonial-head">
+                <span class="dr-testimonial-avatar" aria-hidden="true">С</span>
+                <span class="dr-testimonial-stars">★★★★★</span>
+              </div>
+              <p>“Удобно, что бабушка готовит смесь с теми же настройками. Ошибок стало меньше.”</p>
+              <strong>Семья с двойней</strong>
+            </article>
+            <article data-reveal>
+              <div class="dr-testimonial-head">
+                <span class="dr-testimonial-avatar" aria-hidden="true">П</span>
+                <span class="dr-testimonial-stars">★★★★★</span>
+              </div>
+              <p>“Устройство выглядит аккуратно, стоит на кухне постоянно и реально экономит время.”</p>
+              <strong>Папа малыша</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dr-section dr-faq-section" id="faq">
+        <div class="shell dr-faq-layout">
+          <div data-reveal>
+            <p class="eyebrow">Вопросы</p>
+            <h2>Вопросы <span>перед покупкой</span></h2>
+          </div>
+          <div class="dr-faq-list" data-reveal>
+            <details open>
+              <summary>Можно ли настроить температуру?</summary>
+              <p>Да, диапазон 35-70°C помогает подобрать комфортный режим под смесь и привычки кормления.</p>
+            </details>
+            <details>
+              <summary>Сколько воды помещается в резервуар?</summary>
+              <p>Резервуар рассчитан на 1,5 литра. Этого хватает на несколько кормлений в зависимости от объёма порций.</p>
+            </details>
+            <details>
+              <summary>Кто может готовить смесь?</summary>
+              <p>Папа, бабушка, няня или другие близкие смогут повторить приготовление по сохраненным настройкам.</p>
+            </details>
+            <details>
+              <summary>Как перейти к оплате?</summary>
+              <p>Войдите или зарегистрируйтесь на сайте, затем в блоке оплаты нажмите “Перейти к оплате”.</p>
+            </details>
+            <details>
+              <summary>Как работает Ozon Логистика?</summary>
+              <p>Выберите Ozon Логистику в блоке оплаты. Доставка включена в сумму заказа, а телефон должен совпадать с номером личного кабинета Ozon.</p>
+            </details>
+            <details>
+              <summary>Можно ли оформить СДЭК?</summary>
+              <p>Да. Выберите СДЭК в блоке оплаты и укажите ФИО, телефон, город, адрес или код ПВЗ. Стоимость доставки рассчитывается индивидуально.</p>
+            </details>
+            <details>
+              <summary>Что проверить при получении?</summary>
+              <p>Сразу проверьте комплектность и целостность. Если есть проблема, не забирайте заказ и передайте его обратно курьеру или сотруднику ПВЗ.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <aside class="dr-market-bottom" aria-label="Оформление заказа Dr. Mix">
+      <div class="shell">
+        <div class="dr-marketplace-copy dr-marketplace-section-head">
+          <p class="eyebrow">Пока оплата на сайте подключается</p>
+          <h2>Купить Dr. Mix на маркетплейсе</h2>
+          <p>
+            На первое время оформляйте заказ через Ozon или Wildberries.
+            После регистрации на сайте откроется промокод для покупки.
+          </p>
+        </div>
+        <div class="dr-payment-card" id="payment">
+          <div class="dr-marketplace-checkout" data-marketplace-card>
+            <div class="dr-market-links compact">
+              <a class="marketplace-ozon" href="/go/ozon" target="_blank" rel="noopener" aria-label="Открыть товар Dr. Mix на Ozon">
+                <span>Ozon</span>
+                <strong>Смотреть товар</strong>
+              </a>
+              <a class="marketplace-wb" href="/go/wb" target="_blank" rel="noopener" aria-label="Открыть товар Dr. Mix на Wildberries">
+                <span>Wildberries</span>
+                <strong>Смотреть товар</strong>
+              </a>
+            </div>
+            <div class="dr-promo-card" data-promo-card>
+              <span data-promo-label>Промокод после регистрации</span>
+              <strong data-promo-code>DRMIX10</strong>
+              <p data-promo-note>Войдите или зарегистрируйтесь, чтобы увидеть промокод.</p>
+              <button class="secondary-btn" type="button" data-promo-auth data-auth-mode="register">Получить промокод</button>
+            </div>
+          </div>
+          <div class="dr-payment-auth" data-payment-auth hidden>
+            <p class="eyebrow">Оформление заказа</p>
+            <h2>Войдите или зарегистрируйтесь</h2>
+            <p>После входа мы вернём вас сюда, и можно будет перейти к оплате Dr. Mix.</p>
+            <div class="dr-payment-auth-actions">
+              <a class="primary-btn" data-payment-login data-auth-mode="login" href="#auth">Войти</a>
+              <a class="secondary-btn" data-payment-register data-auth-mode="register" href="#auth">Зарегистрироваться</a>
+            </div>
+          </div>
+
+          <form class="dr-payment-form" id="paymentForm" hidden>
+            <div class="dr-payment-form-head">
+              <div>
+                <p class="eyebrow">Оформление заказа</p>
+                <strong class="dr-payment-price" data-payment-price>Цена настраивается</strong>
+              </div>
+              <span class="dr-payment-status pending" data-payment-status>Готово к подключению</span>
+            </div>
+            <label>
+              <span>Имя</span>
+              <input type="text" name="name" placeholder="Ваше имя" required />
+            </label>
+            <label>
+              <span>Email для чека</span>
+              <input type="email" name="email" placeholder="email@example.com" />
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 999 000-00-00" />
+              <small class="field-hint">Для Ozon Логистики укажите номер, который совпадает с личным кабинетом Ozon.</small>
+            </label>
+            <label>
+              <span>Количество</span>
+              <select name="quantity">
+                <option value="1">1 шт.</option>
+                <option value="2">2 шт.</option>
+                <option value="3">3 шт.</option>
+              </select>
+            </label>
+            <label>
+              <span>Способ доставки</span>
+              <select name="delivery">
+                <option value="Ozon Логистика">Ozon Логистика - доставка включена в сумму заказа</option>
+                <option value="СДЭК">СДЭК - индивидуальный расчет доставки</option>
+              </select>
+            </label>
+            <label class="wide">
+              <span>Комментарий к заказу</span>
+              <textarea
+                name="comment"
+                rows="3"
+                placeholder="Для СДЭК: ФИО, телефон, город, адрес или код ПВЗ, удобный способ связи"
+              ></textarea>
+            </label>
+            <button class="primary-btn wide" type="submit" data-payment-submit>Перейти к оплате</button>
+            <p class="form-note" id="paymentNote" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </aside>
+
+    <section class="section quote-section dr-contact-section" id="contacts">
+      <details class="dr-contact-disclosure">
+        <summary class="shell dr-contact-summary">
+          <span>Вопрос перед покупкой</span>
+          <strong>Остались вопросы по Dr. Mix?</strong>
+          <em>Свернуть / развернуть</em>
+        </summary>
+        <div class="shell quote-layout" data-reveal>
+        <div class="quote-copy">
+          <p class="eyebrow">Вопрос перед покупкой</p>
+          <h2>Остались вопросы по Dr. Mix?</h2>
+          <p>
+            Оставьте контакт, если хотите уточнить характеристики, комплектацию,
+            наличие или индивидуальную доставку СДЭК перед покупкой.
+          </p>
+          <div class="dr-contact-links" aria-label="Контакты и социальные сети Dr. Mix">
+            <a href="tel:+79297214587"><span>Рабочий телефон</span><strong>+7 929 721-45-87</strong></a>
+            <a href="mailto:support@dr.mix.com"><span>Почта</span><strong>support@dr.mix.com</strong></a>
+            <a href="https://t.me/rezervcorporation" target="_blank" rel="noopener"><span>Telegram</span><strong>@rezervcorporation</strong></a>
+            <a href="https://vk.com/rezervcorporation" target="_blank" rel="noopener"><span>VK</span><strong>rezervcorporation</strong></a>
+            <a href="https://wa.me/79297214587" target="_blank" rel="noopener"><span>WhatsApp</span><strong>Написать</strong></a>
+            <a href="#payment"><span>Оплата</span><strong>Выбрать доставку</strong></a>
+          </div>
+        </div>
+
+        <form class="lead-form" id="leadForm">
+          <label>
+            <span>Имя</span>
+            <input type="text" name="name" placeholder="Ваше имя" required />
+          </label>
+          <label>
+            <span>Телефон или мессенджер</span>
+            <input type="text" name="contact" placeholder="+7 999 000-00-00 или WhatsApp" required />
+          </label>
+          <label class="wide">
+            <span>Тема обращения</span>
+            <select name="format">
+              <option>Dr. Mix / вопрос перед покупкой</option>
+              <option>Хочу купить Dr. Mix</option>
+              <option>Доставка СДЭК / расчет стоимости</option>
+              <option>Ozon Логистика / вопрос по номеру телефона</option>
+              <option>Нужна консультация по настройкам</option>
+              <option>Вопрос по комплектации и гарантии</option>
+            </select>
+          </label>
+          <label class="wide">
+            <span>Комментарий</span>
+            <textarea
+              name="products"
+              rows="5"
+              placeholder="Для СДЭК укажите ФИО, телефон, город, адрес или код ПВЗ СДЭК"
+            >Dr. Mix / вопрос перед покупкой</textarea>
+          </label>
+          <button class="primary-btn wide" type="submit">Задать вопрос</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+        </div>
+      </details>
+    </section>
+
+    <div class="dr-auth-modal" data-auth-modal hidden>
+      <button class="dr-auth-backdrop" type="button" data-auth-close aria-label="Закрыть окно входа"></button>
+      <section class="dr-auth-dialog" role="dialog" aria-modal="true" aria-labelledby="drAuthTitle">
+        <button class="dr-auth-close" type="button" data-auth-close aria-label="Закрыть">×</button>
+        <p class="eyebrow">Личный кабинет</p>
+        <h2 id="drAuthTitle">Вход в Dr. Mix</h2>
+        <div class="dr-auth-tabs" role="tablist" aria-label="Вход или регистрация">
+          <button class="active" type="button" data-auth-modal-tab="login">Войти</button>
+          <button type="button" data-auth-modal-tab="register">Регистрация</button>
+        </div>
+        <form class="dr-auth-form active" data-auth-modal-form="login">
+          <label>
+            <span>Email или admin</span>
+            <input type="text" name="email" autocomplete="username" required />
+          </label>
+          <label>
+            <span>Пароль</span>
+            <input type="password" name="password" autocomplete="current-password" required />
+          </label>
+          <button class="primary-btn wide" type="submit">Войти</button>
+        </form>
+        <form class="dr-auth-form" data-auth-modal-form="register" hidden>
+          <label>
+            <span>Имя</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Пароль</span>
+            <input type="password" name="password" autocomplete="new-password" minlength="6" required />
+          </label>
+          <label class="dr-auth-check">
+            <input type="checkbox" name="ageConfirmed" required />
+            <span>Мне есть 18 лет, я регистрируюсь от своего имени.</span>
+          </label>
+          <label class="dr-auth-check">
+            <input type="checkbox" name="personalDataConsent" required />
+            <span>Я принимаю <a href="privacy.html" target="_blank" rel="noopener">политику обработки персональных данных</a>.</span>
+          </label>
+          <label class="dr-auth-check">
+            <input type="checkbox" name="marketingConsent" />
+            <span>Я согласен получать информационные сообщения по заказу и Dr. Mix.</span>
+          </label>
+          <button class="primary-btn wide" type="submit">Зарегистрироваться</button>
+        </form>
+        <p class="form-note" data-auth-modal-note role="status"></p>
+      </section>
+    </div>
+
+    <details class="dr-support-widget" aria-label="Поддержка Dr. Mix">
+      <summary aria-label="Открыть поддержку"><span aria-hidden="true">?</span></summary>
+      <div class="dr-support-panel" role="group" aria-label="Каналы поддержки">
+        <strong>Поддержка</strong>
+        <a href="tel:+79297214587">Позвонить</a>
+        <a href="https://t.me/rezervcorporation" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/79297214587" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#contacts">Написать на сайте</a>
+      </div>
+    </details>
+
+    <a class="dr-mobile-cta" href="#payment">Купить Dr. Mix</a>
+  </body>
+</html>
