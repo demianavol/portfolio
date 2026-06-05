@@ -131,11 +131,15 @@ main {
 }
 
 .nav {
+  position: sticky;
+  top: 14px;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   min-height: 48px;
+  max-width: 100%;
 }
 
 .brand,
@@ -177,25 +181,38 @@ main {
 }
 
 .nav-cluster {
+  flex: 1 1 auto;
+  justify-content: flex-end;
   gap: 10px;
   min-width: 0;
 }
 
 .nav-links {
-  gap: 8px;
+  flex: 0 1 auto;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  max-width: min(760px, 100%);
+  overflow-x: auto;
+  gap: 4px;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: 8px;
   padding: 5px;
-  background: rgba(8, 10, 13, 0.56);
+  background: rgba(8, 12, 18, 0.76);
   backdrop-filter: blur(18px);
+  scrollbar-width: none;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-links a {
+  flex: 0 0 auto;
   min-height: 34px;
-  padding: 8px 14px;
-  border-radius: 999px;
+  padding: 8px 10px;
+  border-radius: 7px;
   color: var(--muted-strong);
-  font-size: 0.86rem;
+  font-size: 0.8rem;
   transition:
     color 180ms ease,
     background 180ms ease;
@@ -1098,12 +1115,47 @@ main {
 
 .skill-card,
 .project-card {
+  position: relative;
+  overflow: hidden;
   min-height: 276px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 22px;
   background: var(--panel);
   backdrop-filter: blur(20px);
+}
+
+.skill-card::before,
+.project-card::before,
+.education-card::before,
+.achievement::before,
+.timeline-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  content: "";
+  background: var(--card-accent, rgba(145, 208, 228, 0.48));
+}
+
+.skill-card:nth-child(2n),
+.project-card:nth-child(2n),
+.education-card:nth-child(2n),
+.achievement:nth-child(2n) {
+  --card-accent: rgba(143, 206, 177, 0.5);
+}
+
+.skill-card:nth-child(3n),
+.project-card:nth-child(3n),
+.education-card:nth-child(3n),
+.achievement:nth-child(3n) {
+  --card-accent: rgba(212, 177, 111, 0.52);
+}
+
+.skill-card:nth-child(4n),
+.project-card:nth-child(4n),
+.education-card:nth-child(4n),
+.achievement:nth-child(4n) {
+  --card-accent: rgba(156, 139, 192, 0.46);
 }
 
 .skill-card-top {
@@ -1212,6 +1264,8 @@ main {
 }
 
 .education-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 255px;
@@ -1273,6 +1327,8 @@ main {
 }
 
 .achievement {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 16px;
@@ -1444,13 +1500,19 @@ main {
 
   .nav-links {
     width: 100%;
-    justify-content: space-between;
-    gap: 2px;
+    justify-content: flex-start;
+    gap: 4px;
+    overflow-x: auto;
     padding: 4px;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-links a {
-    flex: 1;
+    flex: 0 0 auto;
     justify-content: center;
     text-align: center;
     min-height: 31px;
@@ -1625,40 +1687,41 @@ main {
 /* UML landing style adaptation */
 :root {
   --bg: #050509;
-  --bg-2: #070a12;
-  --panel: rgba(255, 255, 255, 0.046);
-  --panel-strong: rgba(7, 12, 20, 0.78);
-  --line: rgba(255, 255, 255, 0.09);
-  --line-strong: rgba(97, 244, 255, 0.36);
+  --bg-2: #0b1016;
+  --panel: rgba(19, 27, 35, 0.7);
+  --panel-strong: rgba(18, 25, 33, 0.88);
+  --line: rgba(220, 232, 238, 0.12);
+  --line-strong: rgba(125, 164, 184, 0.38);
   --text: #ffffff;
-  --muted: rgba(255, 255, 255, 0.48);
-  --muted-strong: rgba(255, 255, 255, 0.72);
-  --lime: #61f4ff;
-  --lime-soft: rgba(97, 244, 255, 0.13);
-  --cyan: #61f4ff;
-  --blue: #3aa7ff;
-  --violet: #9b6cff;
-  --emerald: #44f0a9;
-  --steel: rgba(255, 255, 255, 0.64);
-  --amber: #44f0a9;
-  --shadow: 0 34px 120px rgba(0, 0, 0, 0.38);
+  --muted: rgba(224, 232, 235, 0.5);
+  --muted-strong: rgba(235, 241, 242, 0.74);
+  --lime: #91d0e4;
+  --lime-soft: rgba(145, 208, 228, 0.12);
+  --cyan: #8fd1df;
+  --blue: #6fa3c7;
+  --violet: #9c8bc0;
+  --emerald: #8fceb1;
+  --steel: rgba(228, 236, 239, 0.68);
+  --amber: #d4b16f;
+  --shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
 }
 
 body {
   background:
-    radial-gradient(circle at 30% -10%, rgba(58, 167, 255, 0.18), transparent 28rem),
-    radial-gradient(circle at 78% 16%, rgba(155, 108, 255, 0.13), transparent 26rem),
-    linear-gradient(180deg, #050509 0%, #070a12 42%, #050509 100%);
+    radial-gradient(circle at 24% -10%, rgba(111, 163, 199, 0.13), transparent 29rem),
+    radial-gradient(circle at 82% 12%, rgba(143, 206, 177, 0.09), transparent 25rem),
+    linear-gradient(180deg, #050509 0%, #0b1016 46%, #06080c 100%);
+  background-attachment: fixed;
 }
 
 body::before {
   background:
-    linear-gradient(115deg, rgba(68, 240, 169, 0.06), transparent 28%, rgba(155, 108, 255, 0.08) 44%, transparent 58%),
-    linear-gradient(235deg, transparent 10%, rgba(97, 244, 255, 0.08) 34%, transparent 52%, rgba(58, 167, 255, 0.07) 72%, transparent 88%),
-    radial-gradient(circle at 52% 36%, rgba(255, 255, 255, 0.06), transparent 34%);
-  filter: blur(84px) saturate(0.95);
-  opacity: 0.46;
-  animation: mesh-drift 18s ease-in-out infinite alternate;
+    linear-gradient(115deg, rgba(143, 206, 177, 0.045), transparent 30%, rgba(156, 139, 192, 0.05) 48%, transparent 64%),
+    linear-gradient(235deg, transparent 10%, rgba(145, 208, 228, 0.055) 34%, transparent 54%, rgba(111, 163, 199, 0.045) 74%, transparent 90%),
+    radial-gradient(circle at 52% 36%, rgba(255, 255, 255, 0.035), transparent 34%);
+  filter: blur(86px) saturate(0.82);
+  opacity: 0.38;
+  animation: mesh-drift 22s ease-in-out infinite alternate;
 }
 
 body::after {
@@ -1696,9 +1759,9 @@ body::after {
   height: 18rem;
   min-width: 720px;
   border: 1px solid rgba(97, 244, 255, 0.05);
-  background: linear-gradient(90deg, transparent, rgba(97, 244, 255, 0.08), rgba(155, 108, 255, 0.06), transparent);
+  background: linear-gradient(90deg, transparent, rgba(145, 208, 228, 0.055), rgba(143, 206, 177, 0.045), transparent);
   filter: blur(42px);
-  opacity: 0.28;
+  opacity: 0.2;
   clip-path: polygon(0 45%, 18% 30%, 42% 52%, 68% 24%, 100% 42%, 100% 72%, 68% 54%, 40% 80%, 16% 58%, 0 76%);
   transform: translateX(-50%) rotate(-8deg);
   animation: aurora-sweep 16s ease-in-out infinite alternate;
@@ -1706,12 +1769,12 @@ body::after {
 
 .hero::after {
   inset: 10% -6% 4% -6%;
-  border: 1px solid rgba(97, 244, 255, 0.13);
+  border: 1px solid rgba(145, 208, 228, 0.09);
   border-radius: 38% 62% 55% 45%;
   background:
-    linear-gradient(125deg, transparent 12%, rgba(97, 244, 255, 0.10) 36%, transparent 54%),
-    linear-gradient(310deg, transparent 22%, rgba(155, 108, 255, 0.13), transparent 68%);
-  opacity: 0.28;
+    linear-gradient(125deg, transparent 12%, rgba(145, 208, 228, 0.055) 36%, transparent 54%),
+    linear-gradient(310deg, transparent 22%, rgba(156, 139, 192, 0.07), transparent 68%);
+  opacity: 0.2;
   transform: rotate(-7deg);
 }
 
@@ -1958,19 +2021,19 @@ body::after {
 }
 
 .timeline-line {
-  background: linear-gradient(180deg, transparent, rgba(97, 244, 255, 0.42), rgba(155, 108, 255, 0.32), transparent);
+  background: linear-gradient(180deg, transparent, rgba(145, 208, 228, 0.34), rgba(156, 139, 192, 0.22), transparent);
 }
 
 .timeline-dot {
   border-color: #050509;
   background: var(--cyan);
-  box-shadow: 0 0 30px rgba(97, 244, 255, 0.34);
+  box-shadow: 0 0 20px rgba(145, 208, 228, 0.22);
 }
 
 .role-summary {
   grid-template-columns: minmax(0, 1fr) minmax(250px, auto);
   background:
-    radial-gradient(circle at 84% 20%, rgba(68, 240, 169, 0.08), transparent 30%),
+    radial-gradient(circle at 84% 20%, rgba(143, 206, 177, 0.065), transparent 30%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
 }
 
@@ -1985,15 +2048,15 @@ body::after {
   z-index: -1;
   content: "";
   background:
-    linear-gradient(120deg, rgba(97, 244, 255, 0.08), transparent 36%, rgba(155, 108, 255, 0.09) 54%, transparent 76%),
-    linear-gradient(260deg, transparent 18%, rgba(68, 240, 169, 0.055), transparent 58%);
+    linear-gradient(120deg, rgba(145, 208, 228, 0.055), transparent 36%, rgba(156, 139, 192, 0.055) 54%, transparent 76%),
+    linear-gradient(260deg, transparent 18%, rgba(143, 206, 177, 0.04), transparent 58%);
   filter: blur(56px);
-  opacity: 0.72;
-  animation: mesh-drift 14s ease-in-out infinite alternate;
+  opacity: 0.46;
+  animation: mesh-drift 18s ease-in-out infinite alternate;
 }
 
 .skill-meter span {
-  background: linear-gradient(90deg, var(--cyan), var(--blue), var(--violet), var(--emerald));
+  background: linear-gradient(90deg, var(--cyan), var(--blue), var(--emerald));
 }
 
 .tool-chip svg {
@@ -2001,8 +2064,8 @@ body::after {
 }
 
 .contact-link:hover {
-  border-color: rgba(97, 244, 255, 0.28);
-  background: rgba(97, 244, 255, 0.075);
+  border-color: rgba(145, 208, 228, 0.24);
+  background: rgba(145, 208, 228, 0.06);
 }
 
 .footer {

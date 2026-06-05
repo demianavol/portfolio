@@ -89,7 +89,12 @@ export type Profile = {
 export type UiCopy = {
   nav: {
     timeline: string;
+    projects: string;
+    role: string;
     ulty: string;
+    ai: string;
+    skills: string;
+    education: string;
     contact: string;
   };
   aria: {
@@ -182,18 +187,16 @@ export type UiCopy = {
 
 const sharedContacts = {
   ru: [
-    { kind: "phone", label: "Телефон", value: "PHONE", href: "tel:PHONE" },
-    { kind: "email", label: "Почта", value: "EMAIL", href: "mailto:EMAIL" },
-    { kind: "telegram", label: "Telegram", value: "TELEGRAM_URL", href: "TELEGRAM_URL" },
-    { kind: "whatsapp", label: "WhatsApp", value: "WHATSAPP_URL", href: "WHATSAPP_URL" },
-    { kind: "linkedin", label: "LinkedIn", value: "LINKEDIN_URL", href: "LINKEDIN_URL" },
+    { kind: "phone", label: "Телефон", value: "+7 929 721-45-87", href: "tel:+79297214587" },
+    { kind: "email", label: "Почта", value: "yaminaasfak@gmail.com", href: "mailto:yaminaasfak@gmail.com" },
+    { kind: "telegram", label: "Telegram", value: "@demianworkself", href: "https://t.me/demianworkself" },
+    { kind: "whatsapp", label: "WhatsApp", value: "+7 929 721-45-87", href: "https://wa.me/79297214587" },
   ],
   en: [
-    { kind: "phone", label: "Phone", value: "PHONE", href: "tel:PHONE" },
-    { kind: "email", label: "Email", value: "EMAIL", href: "mailto:EMAIL" },
-    { kind: "telegram", label: "Telegram", value: "TELEGRAM_URL", href: "TELEGRAM_URL" },
-    { kind: "whatsapp", label: "WhatsApp", value: "WHATSAPP_URL", href: "WHATSAPP_URL" },
-    { kind: "linkedin", label: "LinkedIn", value: "LINKEDIN_URL", href: "LINKEDIN_URL" },
+    { kind: "phone", label: "Phone", value: "+7 929 721-45-87", href: "tel:+79297214587" },
+    { kind: "email", label: "Email", value: "yaminaasfak@gmail.com", href: "mailto:yaminaasfak@gmail.com" },
+    { kind: "telegram", label: "Telegram", value: "@demianworkself", href: "https://t.me/demianworkself" },
+    { kind: "whatsapp", label: "WhatsApp", value: "+7 929 721-45-87", href: "https://wa.me/79297214587" },
   ],
 } satisfies Record<Language, Contact[]>;
 
@@ -496,42 +499,42 @@ export const profiles: Record<Language, Profile> = {
   },
   en: {
     identity: {
-      name: "FULL_NAME",
-      location: "Remote / relocation-ready: South Europe, UAE, SEA",
-      title: "AI Operations & Product Builder",
-      availability: "AI Operations, e-commerce, import, product ownership",
+      name: "Демиан",
+      location: "Russia, major cities / warm countries / remote / relocation",
+      title: "Operations, AI and product systems",
+      availability: "AI, online commerce, operations, programming, management, hypothesis testing",
     },
     hero: {
-      eyebrow: "AI-assisted operator building practical systems",
-      headline: "AI Operations & Product Builder",
+      eyebrow: "For employers: I take complex tasks and drive them to results",
+      headline: "Demian - versatile specialist",
       subheadline:
-        "I work across operations, commerce, marketplaces, sales, AI implementation, websites, software prototypes, agents, and automated outreach. I learn quickly, understand human behavior, and adapt fast to new business contexts.",
+        "I work with different tasks: operations, commerce, marketplaces, sales and meetings. I implement AI, build websites, software prototypes, agents and automated outreach. I understand psychology, learn quickly and stay open to new directions.",
       signals: [
-        { title: "Operations", text: "I turn loose tasks into clear steps and finished outcomes." },
-        { title: "Commerce", text: "Marketplaces, retail, wholesale, sales, meetings, and daily execution." },
-        { title: "AI agents", text: "AI tools, automated outreach, agent flows, and business integrations." },
-        { title: "Web and software", text: "Websites, prototypes, catalogs, and internal tools with AI-assisted execution." },
-        { title: "Psychology", text: "A practical understanding of people, motivation, communication, and behavior." },
-        { title: "Learning", text: "Fast learning, new domains, and calm adaptation to unfamiliar tasks." },
+        { title: "Operations", text: "I take chaotic tasks, split them into clear steps and bring them to a result." },
+        { title: "Commerce", text: "Marketplaces, retail, wholesale, sales, meetings and daily support." },
+        { title: "AI and agents", text: "I implement neural networks, automated outreach, agents and working business scenarios." },
+        { title: "Sites and software", text: "I build websites, prototypes, catalogs and tools through AI and technical logic." },
+        { title: "Psychology", text: "I understand people, motivation, communication and behavior in work tasks." },
+        { title: "Growth", text: "I learn quickly, stay open to new fields and enter unfamiliar tasks calmly." },
       ],
       proofPoints: [
         {
-          stat: "2025-2026",
-          label: "operations close to leadership",
+          stat: "10 mo.",
+          label: "close to the owner",
           detail:
-            "Marketplaces, wholesale, import from China, AI processes, and daily business execution.",
+            "Closing operational tasks in a trading business: platforms, wholesale, procurement, foreign trade, documents and daily execution.",
         },
         {
-          stat: "200+",
-          label: "test-stage active users",
+          stat: "Neural nets",
+          label: "dense daily work",
           detail:
-            "UltyMyLife as a Telegram Mini App: tasks, habits, workouts, sleep, and mental fitness.",
+            "Using ChatGPT, Claude, Codex, Cursor, Gemini and other tools for websites, automation, texts, research and hypotheses.",
         },
         {
-          stat: "$100K+",
-          label: "logistics context",
+          stat: "UltyMyLife",
+          label: "own Telegram product",
           detail:
-            "Coordinated import workflows, China suppliers, customs brokers, and documentation for larger cargo batches.",
+            "Created a large product inside Telegram: tasks, habits, workouts, sleep and personal effectiveness in one system.",
         },
       ],
     },
@@ -541,7 +544,7 @@ export const profiles: Record<Language, Profile> = {
         label: "Technical college",
         title: "Programmer diploma",
         description:
-          "Built algorithmic logic, software architecture awareness, and the ability to translate business objectives into technical language for developers.",
+          "Studied the programming foundation, built technical skills and useful connections, played in basketball competitions, and studied AI, psychology, business and editing in parallel.",
         metrics: ["Algorithmic thinking", "Software architecture", "Technical communication"],
         targetId: "education",
         cta: "Learn more",
@@ -551,18 +554,18 @@ export const profiles: Record<Language, Profile> = {
         label: "Rezerv / business operations",
         title: "Operations Coordinator / Executive Assistant",
         description:
-          "Operating at Rezerv, a trading and manufacturing company, handling a wide task flow alongside the owner: marketplaces, wholesale, foreign trade, procurement, AI automation, and daily execution.",
-        metrics: ["Operations", "B2B and Avito", "Import workflows"],
+          "Working in the trading company Rezerv: sales and supplies from China, marketplaces, wholesale, foreign trade, procurement, AI automation and daily execution.",
+        metrics: ["Retail", "AI agents", "Websites", "Legal tasks", "Operations", "Commerce", "Meetings", "Marketing"],
         targetId: "current-role",
         cta: "Learn more",
       },
       {
         period: "Current",
         label: "AI Operations",
-        title: "Custom agents, lead generation, and AI-assisted web build",
+        title: "AI agents, customer acquisition and websites with AI",
         description:
-          "Designs AI agents for calling, outreach, and first-stage B2B communication, while using AI copilots for websites, documentation, research, and faster operating cycles.",
-        metrics: ["AI lead generation", "Prompt Engineering", "OpenAI Codex"],
+          "I create websites, agents, software prototypes, automated outreach and integrate AI into business: from idea, scenario and structure to a working tool.",
+        metrics: ["Websites", "Agents", "Software", "Automated outreach", "AI integration"],
         targetId: "ai-tools",
         cta: "Learn more",
       },
@@ -579,31 +582,31 @@ export const profiles: Record<Language, Profile> = {
     ],
     roles: [
       {
-        title: "Business Assistant / Operations Coordinator",
-        organization: "Rezerv Trading & Manufacturing Company | Naberezhnye Chelny",
+        title: "Operations Coordinator / Executive Assistant",
+        organization: "Rezerv Trading Company",
         period: "2025-2026",
         summary:
-          "A broad operating role close to the owner across e-commerce, wholesale, foreign trade, import, marketing support, and AI automation. The work requires fast context switching, ownership, and execution discipline.",
+          "I work close to the owner and close tasks that directly affect sales and supply from China: marketplaces, wholesale, procurement, foreign trade, documents, AI automation and the catalog website.",
         bullets: [
           {
             title: "Operational execution",
-            text: "Managed a wide operational task pool alongside the owner: marketplaces, wholesale sales, foreign trade, procurement, process ownership, and daily execution.",
+            text: "I take tasks from the manager, break them down, bring them to a result and keep deadlines, documents, platforms and commercial processes in focus.",
           },
           {
             title: "AI agents for sales",
-            text: "Designed and configured AI agents for automated calls, messenger outreach, and email sequences to accelerate the first B2B sales cycle.",
+            text: "I configure scenarios for automated calls, messenger outreach and email sequences to speed up first contact with corporate clients.",
           },
           {
             title: "Wholesale Avito channel",
-            text: "Created and packaged a wholesale sales channel on Avito from scratch, built dynamic wholesale price lists, and handled B2B negotiations.",
+            text: "I packaged the wholesale direction from scratch: listings, commercial positioning, dynamic price lists and customer negotiations.",
           },
           {
             title: "China import coordination",
-            text: "Coordinated supply chains from China, worked with customs brokers, and prepared documentation for cargo batches above $100K.",
+            text: "I coordinate suppliers, brokers, documents and logistics for large batches where timing, cost and risk control matter.",
           },
           {
-            title: "AI-assisted catalog website",
-            text: "Using AI copilots and OpenAI Codex, independently built and launched a technology-driven catalog website, reducing classic development costs.",
+            title: "Dr. Mix and trading storefront",
+            text: "I built a commercial website with a landing page, catalog, requests, admin panel, analytics and working pages for retail, wholesale and operations.",
           },
         ],
       },
@@ -611,50 +614,51 @@ export const profiles: Record<Language, Profile> = {
     projects: [
       {
         name: "UltyMyLife",
-        type: "Co-founder / Product Owner / Life OS",
+        type: "Own product",
         description:
-          "A Telegram Mini App and personal operating system that connects tasks, habits, workout diaries, sleep, and mental fitness. I own product architecture, user logic, roadmap, and translation of business requirements into technical specs for the technical partner.",
+          "A Telegram product for tasks, habits, workouts and sleep. I designed the logic, scenarios and brought the first version to testing.",
         impact: [
-          "Designed product architecture and user flows from zero to MVP.",
-          "Led the product side of a 10-month development cycle with a technical partner.",
-          "Reached a test-stage base of 200+ active users and managed iterations through feedback.",
+          "Product architecture and scenarios from scratch.",
+          "10 months of development together with a technical partner.",
+          "200+ users in testing and development through feedback.",
         ],
         caseStudy: [
           {
             title: "Idea",
-            text: "Build one personal system for tasks, habits, workouts, sleep, and practical self-management.",
+            text: "One system for tasks, habits, workouts, sleep and recovery inside Telegram.",
           },
           {
             title: "My role",
-            text: "Own product logic, user flows, screen structure, roadmap, and technical task descriptions for the developer.",
+            text: "I design logic, scenarios, screens and clear tasks for development.",
           },
           {
             title: "Built so far",
-            text: "Reached an MVP, tested with 200+ active users, and continued product iterations through feedback.",
+            text: "The first version works, and the product has been tested with 200+ users.",
           },
           {
             title: "Next focus",
-            text: "Improve product value, habit mechanics, progress metrics, and the dedicated project landing page.",
+            text: "I am improving habit mechanics, progress metrics and the detailed project page.",
           },
         ],
-        link: "ULTYMYLIFE_URL",
+        link: "ultymylife/index.html",
       },
       {
-        name: "E-commerce Catalog Website",
-        type: "AI-assisted technical build",
+        name: "Dr. Mix / trading web project",
+        type: "Landing page, catalog, admin panel and operating system",
         description:
-          "Created a technology-driven catalog website for a trading business with marketplace-style pages, assortment structure, commercial content, and AI-assisted implementation.",
+          "Commercial web project for Dr. Mix: landing page, catalog, requests, customer center, admin panel, analytics and deployment preparation.",
         impact: [
-          "Used AI copilots to move from idea to working pages faster.",
-          "Structured product information into a cleaner sales surface.",
-          "Improved the visual layer of a traditional trading workflow.",
+          "Built not one page, but a complete structure: storefront, orders, requests, analytics, admin panel and content pages.",
+          "Implemented a Node.js server, request and event storage, admin password flow, public pages and closed sections.",
+          "Prepared deployment documentation for Ubuntu, Nginx, PM2, HTTPS and YooKassa payment integration.",
         ],
+        link: "dr-mix/index.html",
       },
       {
-        name: "AI Workflow & Agent Setup",
+        name: "AI processes and agents",
         type: "Automation / Productivity Systems",
         description:
-          "Configured AI assistants and agent-like workflows for lead generation, calling, outreach, research, drafting, process support, site generation, and task decomposition.",
+          "Configured AI assistants and agent scenarios for customer acquisition, calls, outreach, research, writing, process support, site generation and task decomposition.",
         impact: [
           "Reduced friction in repetitive business tasks.",
           "Improved speed of testing ideas and producing working drafts.",
@@ -662,10 +666,10 @@ export const profiles: Record<Language, Profile> = {
         ],
       },
       {
-        name: "Brand Attention Experiments",
+        name: "Brand experiments",
         type: "Marketing / Team Identity",
         description:
-          "Created branded T-shirt concepts with a team logo and name to support visibility, attention, and internal identity.",
+          "Created branded T-shirt concepts with team logo and name to strengthen recognition, attention and internal identity.",
         impact: [
           "Connected operations work with practical marketing thinking.",
           "Explored brand signals beyond marketplace listings.",
@@ -795,7 +799,12 @@ export const uiCopy: Record<Language, UiCopy> = {
   ru: {
     nav: {
       timeline: "Путь",
+      projects: "Проекты",
+      role: "Роль",
       ulty: "UltyMyLife",
+      ai: "ИИ",
+      skills: "Навыки",
+      education: "Образование",
       contact: "Контакты",
     },
     aria: {
@@ -898,7 +907,12 @@ export const uiCopy: Record<Language, UiCopy> = {
   en: {
     nav: {
       timeline: "Timeline",
+      projects: "Projects",
+      role: "Role",
       ulty: "UltyMyLife",
+      ai: "AI",
+      skills: "Skills",
+      education: "Education",
       contact: "Contact",
     },
     aria: {
@@ -934,16 +948,16 @@ export const uiCopy: Record<Language, UiCopy> = {
       },
       role: {
         eyebrow: "Operating role",
-        title: "Business execution across e-commerce, import, and AI",
+        title: "Operations, sales and AI automation in a trading business",
         current: "Current",
       },
       ulty: {
-        eyebrow: "Major case study",
-        title: "UltyMyLife: founder-led Life OS product",
+        eyebrow: "Key case",
+        title: "UltyMyLife: my life management system",
         intro:
-          "A parallel founder track that turns personal discipline into a structured software ecosystem.",
-        link: "Future landing",
-        modules: ["Tasks", "Habits", "Workouts", "Routines", "Metrics", "Roadmap"],
+          "My product project shows employers how I think about products: from idea and scenarios to the first version, testing and development.",
+        link: "Open UltyMyLife landing",
+        modules: ["Idea", "My role", "First version", "Users", "Metrics", "Development"],
       },
       skills: {
         eyebrow: "Capability matrix",
@@ -958,11 +972,11 @@ export const uiCopy: Record<Language, UiCopy> = {
           "The tools are not decoration. They are used for research, coding assistance, automation, documentation, presentations, and business execution.",
       },
       projects: {
-        eyebrow: "Selected work",
+        eyebrow: "Projects",
         title: "Projects that show execution range",
         intro:
           "A portfolio of practical work: product ownership, commerce websites, admin tools, AI-assisted building, business systems, marketing signals, and operational problem solving.",
-        link: "Open placeholder",
+        link: "Open link",
       },
       liveProjects: {
         eyebrow: "Live work",

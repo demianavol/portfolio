@@ -64,6 +64,7 @@ const skillIcons: LucideIcon[] = [
 const projectIcons: LucideIcon[] = [Rocket, Workflow, Bot, Sparkles];
 const roleBulletIcons: LucideIcon[] = [BriefcaseBusiness, Bot, ShoppingBag, PackageSearch, CircuitBoard];
 const publicUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+const projectUrl = (link?: string) => publicUrl(link ?? "");
 
 type PageProps = {
   profile: Profile;
@@ -101,6 +102,16 @@ function Hero({
 }) {
   const [activeSignalIndex, setActiveSignalIndex] = useState(0);
   const activeSignal = profile.hero.signals[activeSignalIndex] ?? profile.hero.signals[0];
+  const navItems = [
+    { href: "#timeline", label: copy.nav.timeline },
+    { href: "#live-projects", label: copy.nav.projects },
+    { href: "#current-role", label: copy.nav.role },
+    { href: "#ulty", label: copy.nav.ulty },
+    { href: "#ai-tools", label: copy.nav.ai },
+    { href: "#skills", label: copy.nav.skills },
+    { href: "#education", label: copy.nav.education },
+    { href: "#contact", label: copy.nav.contact },
+  ];
 
   return (
     <header className="hero" id="top">
@@ -110,10 +121,11 @@ function Hero({
         </a>
         <div className="nav-cluster">
           <div className="nav-links">
-            <a href="#timeline">{copy.nav.timeline}</a>
-            <a href="#live-projects">{language === "ru" ? "Проекты" : "Work"}</a>
-            <a href="#ulty">{copy.nav.ulty}</a>
-            <a href="#contact">{copy.nav.contact}</a>
+            {navItems.map((item) => (
+              <a href={item.href} key={item.href}>
+                {item.label}
+              </a>
+            ))}
           </div>
           <div className="language-toggle" aria-label={copy.aria.languageSwitcher}>
             {(["ru", "en"] as const).map((item) => (
@@ -404,6 +416,7 @@ function CurrentRole({ profile, copy }: PageProps) {
 
 function UltyCase({ profile, copy }: PageProps) {
   const ulty = profile.projects[0];
+  const ultyUrl = projectUrl(ulty.link);
 
   return (
     <Section
@@ -426,7 +439,7 @@ function UltyCase({ profile, copy }: PageProps) {
           <span className="eyebrow">{ulty.type}</span>
           <h3>{ulty.name}</h3>
           <p>{ulty.description}</p>
-          <a className="text-link" href={ulty.link}>
+          <a className="text-link" href={ultyUrl}>
             {copy.sections.ulty.link}
             <ArrowUpRight size={17} aria-hidden="true" />
           </a>
@@ -499,6 +512,7 @@ function SkillCard({ skill, index }: { skill: SkillGroup; index: number }) {
 function Skills({ profile, copy }: PageProps) {
   return (
     <Section
+      id="skills"
       eyebrow={copy.sections.skills.eyebrow}
       title={copy.sections.skills.title}
       intro={copy.sections.skills.intro}
@@ -571,7 +585,7 @@ function ProjectCard({
         ))}
       </ul>
       {project.link ? (
-        <a className="text-link" href={project.link}>
+        <a className="text-link" href={projectUrl(project.link)}>
           {linkLabel}
           <ArrowUpRight size={16} aria-hidden="true" />
         </a>
