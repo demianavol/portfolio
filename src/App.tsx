@@ -193,18 +193,6 @@ function Hero({
             </a>
           </div>
 
-          <div className="proof-grid" aria-label={copy.aria.proofPoints}>
-            {profile.hero.proofPoints.map((point) => (
-              <div className="proof-item" key={point.label}>
-                <div className="proof-icon">
-                  <BadgeCheck size={18} aria-hidden="true" />
-                </div>
-                <strong className="proof-stat">{point.stat}</strong>
-                <span>{point.label}</span>
-                <p>{point.detail}</p>
-              </div>
-            ))}
-          </div>
         </motion.div>
 
         <motion.div
@@ -231,6 +219,19 @@ function Hero({
             ))}
           </div>
         </motion.div>
+      </div>
+
+      <div className="proof-grid hero-proof-rail" aria-label={copy.aria.proofPoints}>
+        {profile.hero.proofPoints.map((point) => (
+          <div className="proof-item" key={point.label}>
+            <div className="proof-icon">
+              <BadgeCheck size={18} aria-hidden="true" />
+            </div>
+            <strong className="proof-stat">{point.stat}</strong>
+            <span>{point.label}</span>
+            <p>{point.detail}</p>
+          </div>
+        ))}
       </div>
 
       <div className="hero-meta">
@@ -693,6 +694,36 @@ function App() {
     document.documentElement.lang = language;
     document.title = `${profile.identity.name} | ${profile.identity.title}`;
   }, [language, profile.identity.name, profile.identity.title]);
+
+  useEffect(() => {
+    const scrollToHash = (behavior: ScrollBehavior = "smooth") => {
+      const hash = window.location.hash.slice(1);
+
+      if (!hash) {
+        return;
+      }
+
+      const target = document.getElementById(decodeURIComponent(hash));
+
+      if (!target) {
+        return;
+      }
+
+      window.requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior, block: "start" });
+      });
+    };
+
+    const initialScroll = window.setTimeout(() => scrollToHash("auto"), 120);
+    const handleHashChange = () => scrollToHash("smooth");
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.clearTimeout(initialScroll);
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, [language]);
 
   return (
     <main>
