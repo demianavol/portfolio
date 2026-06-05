@@ -33,7 +33,6 @@ import {
   uiCopy,
   type Language,
   type Profile,
-  type Project,
   type SkillGroup,
   type TimelineItem,
   type UiCopy,
@@ -61,7 +60,6 @@ const skillIcons: LucideIcon[] = [
   Languages,
 ];
 
-const projectIcons: LucideIcon[] = [Rocket, Workflow, Bot, Sparkles];
 const roleBulletIcons: LucideIcon[] = [BriefcaseBusiness, Bot, ShoppingBag, PackageSearch, CircuitBoard];
 const publicUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
 const projectUrl = (link?: string) => publicUrl(link ?? "");
@@ -553,68 +551,6 @@ function Toolchain({ profile, copy }: PageProps) {
   );
 }
 
-function ProjectCard({
-  project,
-  index,
-  linkLabel,
-}: {
-  project: Project;
-  index: number;
-  linkLabel: string;
-}) {
-  const Icon = projectIcons[index % projectIcons.length];
-
-  return (
-    <motion.article
-      className="project-card"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.6, delay: index * 0.04 }}
-      variants={fadeUp}
-    >
-      <div className="project-icon">
-        <Icon size={22} aria-hidden="true" />
-      </div>
-      <span>{project.type}</span>
-      <h3>{project.name}</h3>
-      <p>{project.description}</p>
-      <ul>
-        {project.impact.slice(0, 2).map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-      {project.link ? (
-        <a className="text-link" href={projectUrl(project.link)}>
-          {linkLabel}
-          <ArrowUpRight size={16} aria-hidden="true" />
-        </a>
-      ) : null}
-    </motion.article>
-  );
-}
-
-function Projects({ profile, copy }: PageProps) {
-  return (
-    <Section
-      eyebrow={copy.sections.projects.eyebrow}
-      title={copy.sections.projects.title}
-      intro={copy.sections.projects.intro}
-    >
-      <div className="projects-grid">
-        {profile.projects.slice(1).map((project, index) => (
-          <ProjectCard
-            project={project}
-            index={index}
-            key={project.name}
-            linkLabel={copy.sections.projects.link}
-          />
-        ))}
-      </div>
-    </Section>
-  );
-}
-
 function Achievements({ profile, copy }: PageProps) {
   return (
     <Section
@@ -773,7 +709,6 @@ function App() {
       <UltyCase profile={profile} copy={copy} />
       <Toolchain profile={profile} copy={copy} />
       <Skills profile={profile} copy={copy} />
-      <Projects profile={profile} copy={copy} />
       <Achievements profile={profile} copy={copy} />
       <Education profile={profile} copy={copy} />
       <WorkStyle profile={profile} copy={copy} />

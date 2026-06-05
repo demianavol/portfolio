@@ -148,12 +148,6 @@ export type UiCopy = {
       title: string;
       intro: string;
     };
-    projects: {
-      eyebrow: string;
-      title: string;
-      intro: string;
-      link: string;
-    };
     liveProjects: {
       eyebrow: string;
       title: string;
@@ -226,10 +220,10 @@ export const profiles: Record<Language, Profile> = {
           stat: "10 мес.",
           label: "рядом с собственником",
           detail:
-            "Закрываю операционные задачи в торговом бизнесе: площадки, опт, закупки, ВЭД, документы и ежедневное исполнение.",
+            "Закрываю операционные задачи в торговом бизнесе: площадки, опт, закупки, документы, сайты и ежедневное исполнение.",
         },
         {
-          stat: "Нейросети",
+          stat: "ИИ",
           label: "плотная работа каждый день",
           detail:
             "Использую ChatGPT, Claude, Codex, Cursor, Gemini и другие инструменты для сайтов, автоматизаций, текстов, исследований и гипотез.",
@@ -258,7 +252,7 @@ export const profiles: Record<Language, Profile> = {
         label: "Резерв / бизнес-операции",
         title: "Операционный координатор / помощник руководителя",
         description:
-          "Работаю в торговой компании «Резерв»: продажи и поставки товаров из Китая, торговые площадки, оптовое направление, ВЭД, закупки, ИИ-автоматизация и ежедневное исполнение.",
+          "Работаю в торговой компании «Резерв»: продажи, торговые площадки, оптовое направление, поставочные процессы, закупки, ИИ-автоматизация и ежедневное исполнение.",
         metrics: ["Розница", "ИИ-агенты", "Сайты", "Юр. дела", "Операционка", "Коммерция", "Встречи", "Маркетинг"],
         targetId: "current-role",
         cta: "Подробнее",
@@ -290,7 +284,7 @@ export const profiles: Record<Language, Profile> = {
         organization: "Торговая компания «Резерв»",
         period: "2025-2026",
         summary:
-          "Я работаю рядом с собственником и закрываю задачи, которые напрямую влияют на продажи и поставки товаров из Китая: торговые площадки, опт, закупки, ВЭД, документы, ИИ-автоматизация и сайт-каталог.",
+          "Я работаю рядом с собственником и закрываю задачи, которые напрямую влияют на продажи и торговые процессы: площадки, опт, закупки, документы, ИИ-автоматизация и сайт-каталог.",
         bullets: [
           {
             title: "Операционное исполнение",
@@ -305,8 +299,8 @@ export const profiles: Record<Language, Profile> = {
             text: "С нуля упаковал оптовое направление: карточки, коммерческую подачу, динамические прайс-листы и переговоры с клиентами.",
           },
           {
-            title: "Импорт из Китая",
-            text: "Координирую поставщиков, брокеров, документы и логистику для крупных партий, где важны сроки, себестоимость и контроль рисков.",
+            title: "Поставки и документы",
+            text: "Помогаю держать в порядке задачи по поставкам, документам и согласованиям, где важны сроки, точность и понятная коммуникация.",
           },
           {
             title: "Dr. Mix и торговая витрина",
@@ -398,9 +392,9 @@ export const profiles: Record<Language, Profile> = {
         items: ["Архитектура продукта", "Список задач", "Дорожная карта", "Пользовательские сценарии", "Запуск первой версии"],
       },
       {
-        title: "Импорт и опт",
+        title: "Программирование и прототипы",
         level: 78,
-        items: ["Китай", "Таможенные брокеры", "Документы", "$100K+ грузы", "Оптовые продажи"],
+        items: ["React", "Node.js", "GitHub", "Лендинги", "Рабочие прототипы"],
       },
       {
         title: "Маркетинг и метрики",
@@ -453,11 +447,11 @@ export const profiles: Record<Language, Profile> = {
     ],
     education: [
       {
-        title: "Диплом технического колледжа: программист",
-        period: "2021-2025",
+        title: "Практическая разработка с ИИ",
+        period: "React / Node / Codex",
         description:
-          "Техническая база: алгоритмическая логика, понимание архитектуры ПО и способность переводить бизнес-цели на язык разработчиков.",
-        tags: ["Алгоритмы", "Архитектура ПО", "Техническая коммуникация"],
+          "Собираю интерфейсы, лендинги, прототипы и рабочие сценарии через код и ИИ-инструменты, быстро довожу идею до проверяемой версии.",
+        tags: ["AI-assisted coding", "React", "Node.js"],
       },
       {
         title: "Когнитивный профиль",
@@ -483,16 +477,16 @@ export const profiles: Record<Language, Profile> = {
     ],
     workStyle: [
       {
-        title: "Сферы интереса",
-        text: "ИИ в операциях, разработка приложений, торговые площадки, ВЭД, продуктовые системы и личная эффективность.",
+        title: "Большой город и международный трек",
+        text: "Хочу расти в большом городе или зарубежной среде, где есть сильные команды, быстрый темп, новые продукты и международный контекст.",
       },
       {
-        title: "Тип личности",
-        text: "INTJ / ENTJ: люблю системность, факты, метрики, сильную структуру и задачи, где нужно думать на несколько шагов вперед.",
+        title: "Программирование и ИИ-агенты",
+        text: "Хочу программировать, собирать ИИ-агентов, автоматизации и приложения, которые превращают идеи в работающие инструменты.",
       },
       {
-        title: "Обучение и рост",
-        text: "Я открыт к новым задачам, быстро обучаюсь и хочу расти в командах, где ценят системность, инициативу и практический результат.",
+        title: "Универсальная роль",
+        text: "Мне интересна многофункциональная роль: быстро разбираться, соединять продукт, код, ИИ и бизнес-задачи, а не сидеть в одной узкой функции.",
       },
     ],
     contacts: sharedContacts.ru,
@@ -522,10 +516,10 @@ export const profiles: Record<Language, Profile> = {
           stat: "10 mo.",
           label: "close to the owner",
           detail:
-            "Closing operational tasks in a trading business: platforms, wholesale, procurement, foreign trade, documents and daily execution.",
+            "Closing operational tasks in a trading business: platforms, wholesale, procurement, documents, websites and daily execution.",
         },
         {
-          stat: "Neural nets",
+          stat: "AI",
           label: "dense daily work",
           detail:
             "Using ChatGPT, Claude, Codex, Cursor, Gemini and other tools for websites, automation, texts, research and hypotheses.",
@@ -554,7 +548,7 @@ export const profiles: Record<Language, Profile> = {
         label: "Rezerv / business operations",
         title: "Operations Coordinator / Executive Assistant",
         description:
-          "Working in the trading company Rezerv: sales and supplies from China, marketplaces, wholesale, foreign trade, procurement, AI automation and daily execution.",
+          "Working in the trading company Rezerv: sales, marketplaces, wholesale direction, supply workflows, procurement, AI automation and daily execution.",
         metrics: ["Retail", "AI agents", "Websites", "Legal tasks", "Operations", "Commerce", "Meetings", "Marketing"],
         targetId: "current-role",
         cta: "Learn more",
@@ -586,7 +580,7 @@ export const profiles: Record<Language, Profile> = {
         organization: "Rezerv Trading Company",
         period: "2025-2026",
         summary:
-          "I work close to the owner and close tasks that directly affect sales and supply from China: marketplaces, wholesale, procurement, foreign trade, documents, AI automation and the catalog website.",
+          "I work close to the owner and close tasks that directly affect sales and trading workflows: marketplaces, wholesale, procurement, documents, AI automation and the catalog website.",
         bullets: [
           {
             title: "Operational execution",
@@ -601,8 +595,8 @@ export const profiles: Record<Language, Profile> = {
             text: "I packaged the wholesale direction from scratch: listings, commercial positioning, dynamic price lists and customer negotiations.",
           },
           {
-            title: "China import coordination",
-            text: "I coordinate suppliers, brokers, documents and logistics for large batches where timing, cost and risk control matter.",
+            title: "Supply tasks and documents",
+            text: "I help keep supply tasks, documents and approvals organized where timing, precision and clear communication matter.",
           },
           {
             title: "Dr. Mix and trading storefront",
@@ -694,9 +688,9 @@ export const profiles: Record<Language, Profile> = {
         items: ["Product architecture", "Backlog", "Roadmap", "User flows", "MVP launch"],
       },
       {
-        title: "Import & Wholesale",
+        title: "Programming & prototypes",
         level: 78,
-        items: ["China sourcing", "Customs brokers", "Documentation", "$100K+ cargo", "Wholesale sales"],
+        items: ["React", "Node.js", "GitHub", "Landing pages", "Working prototypes"],
       },
       {
         title: "Marketing & Metrics",
@@ -749,11 +743,11 @@ export const profiles: Record<Language, Profile> = {
     ],
     education: [
       {
-        title: "Technical college diploma: Programmer",
-        period: "2021-2025",
+        title: "Practical AI-assisted development",
+        period: "React / Node / Codex",
         description:
-          "Technical foundation in algorithmic logic, software architecture awareness, and translating business goals into developer-ready language.",
-        tags: ["Algorithms", "Software architecture", "Technical communication"],
+          "I build interfaces, landing pages, prototypes and working scenarios through code and AI tools, moving ideas into testable versions quickly.",
+        tags: ["AI-assisted coding", "React", "Node.js"],
       },
       {
         title: "Cognitive profile",
@@ -779,16 +773,16 @@ export const profiles: Record<Language, Profile> = {
     ],
     workStyle: [
       {
-        title: "Interests",
-        text: "AI in operations, app development, marketplaces, import workflows, product systems, and personal productivity.",
+        title: "Big city and international track",
+        text: "I want to grow in a major city or global environment with strong teams, fast pace, new products and international context.",
       },
       {
-        title: "Personality type",
-        text: "INTJ / ENTJ: systems, facts, metrics, clear structure, and long-range thinking.",
+        title: "Programming and AI agents",
+        text: "I want to code, build AI agents, automations and applications that turn ideas into working tools.",
       },
       {
-        title: "Learning and growth",
-        text: "I am open to new responsibilities, learn quickly, and want to grow in teams that value initiative and execution.",
+        title: "Universal role",
+        text: "I am interested in a multifunctional role: learning fast and connecting product, code, AI and business tasks instead of staying in one narrow lane.",
       },
     ],
     contacts: sharedContacts.en,
@@ -825,7 +819,7 @@ export const uiCopy: Record<Language, UiCopy> = {
       visualIntro:
         "Мой фокус не в красивых панелях, а в том, чтобы связать бизнес, ИИ и продуктовую логику в понятный цикл исполнения.",
       visualInputsTitle: "Входящий поток",
-      visualInputs: ["Торговые площадки", "Опт", "Импорт", "Маркетинг", "Метрики"],
+      visualInputs: ["Код", "ИИ-агенты", "Продукт", "Команды", "Метрики"],
       visualCoreTitle: "ИИ и операции",
       visualCoreItems: ["Декомпозиция задач", "ИИ-агенты", "Документация", "Контроль исполнения"],
       visualOutputsTitle: "Результат",
@@ -863,13 +857,6 @@ export const uiCopy: Record<Language, UiCopy> = {
         intro:
           "Инструменты используются не для декора, а для исследований, помощи в разработке, автоматизации, документации, презентаций и бизнес-исполнения.",
       },
-      projects: {
-        eyebrow: "Проекты",
-        title: "Проекты, которые показывают широту исполнения",
-        intro:
-          "Практическое портфолио: продуктовые кейсы, торговые веб-проекты, админки, автоматизация, ИИ-инструменты, маркетинг и операционное решение задач.",
-        link: "Открыть ссылку",
-      },
       liveProjects: {
         eyebrow: "Живые проекты",
         title: "Можно открыть и посмотреть, что уже собрано",
@@ -893,7 +880,7 @@ export const uiCopy: Record<Language, UiCopy> = {
         eyebrow: "Интересы и рабочий стиль",
         title: "Куда я хочу расти",
         intro:
-          "Меня интересуют задачи на стыке бизнеса, ИИ, продукта и операций. Я быстро учусь и хочу развиваться в командах, где важен практический результат.",
+          "Хочу расти в сильной команде: программировать, собирать ИИ-агентов, запускать идеи и пробовать международный трек в большом городе или за рубежом.",
       },
       contact: {
         eyebrow: "Контакты",
@@ -933,7 +920,7 @@ export const uiCopy: Record<Language, UiCopy> = {
       visualIntro:
         "The point is not a decorative dashboard. It is connecting business, AI, and product logic into a clear execution loop.",
       visualInputsTitle: "Input flow",
-      visualInputs: ["Marketplaces", "Wholesale", "Import", "Marketing", "Metrics"],
+      visualInputs: ["Code", "AI agents", "Product", "Teams", "Metrics"],
       visualCoreTitle: "AI + Operations layer",
       visualCoreItems: ["Task decomposition", "AI agents", "Documentation", "Execution control"],
       visualOutputsTitle: "Output",
@@ -971,13 +958,6 @@ export const uiCopy: Record<Language, UiCopy> = {
         intro:
           "The tools are not decoration. They are used for research, coding assistance, automation, documentation, presentations, and business execution.",
       },
-      projects: {
-        eyebrow: "Projects",
-        title: "Projects that show execution range",
-        intro:
-          "A portfolio of practical work: product ownership, commerce websites, admin tools, AI-assisted building, business systems, marketing signals, and operational problem solving.",
-        link: "Open link",
-      },
       liveProjects: {
         eyebrow: "Live work",
         title: "Open the actual pages",
@@ -1001,7 +981,7 @@ export const uiCopy: Record<Language, UiCopy> = {
         eyebrow: "Interests and work style",
         title: "Where I want to grow",
         intro:
-          "I am interested in work across business, AI, product, and operations, and I learn quickly when practical results matter.",
+          "I want to grow in a strong team: code, build AI agents, launch ideas and try an international track in a major city or abroad.",
       },
       contact: {
         eyebrow: "Contact",
