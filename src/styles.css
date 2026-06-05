@@ -4711,3 +4711,202 @@ body::after {
     transform: none;
   }
 }
+
+/* Cool accent and spacing pass */
+:root {
+  --text: #eef4f5;
+  --muted: rgba(216, 229, 232, 0.58);
+  --muted-strong: rgba(225, 235, 237, 0.76);
+  --lime: #b8ccd4;
+  --cyan: #91c7d3;
+  --blue: #9fb9c4;
+  --violet: #b9b7df;
+  --emerald: #a8c9b4;
+  --line: rgba(225, 235, 237, 0.13);
+  --line-strong: rgba(145, 199, 211, 0.3);
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% 2%, rgba(145, 199, 211, 0.16), transparent 30rem),
+    radial-gradient(circle at 88% 10%, rgba(185, 183, 223, 0.12), transparent 26rem),
+    radial-gradient(circle at 62% 72%, rgba(168, 201, 180, 0.08), transparent 30rem),
+    linear-gradient(180deg, #121617 0%, #0f1214 48%, #121617 100%);
+}
+
+.hero {
+  padding-bottom: 92px;
+}
+
+.section {
+  padding: 112px 0;
+}
+
+.contact-section {
+  padding-top: 122px;
+}
+
+.section-heading {
+  margin-bottom: 48px;
+}
+
+.live-projects-grid,
+.case-study-grid,
+.skills-grid,
+.education-grid,
+.work-style-grid {
+  gap: 28px;
+}
+
+.timeline {
+  gap: 42px 94px;
+}
+
+.achievement-grid {
+  gap: 22px;
+}
+
+.hero-proof-rail {
+  gap: 20px;
+  margin-top: 42px;
+}
+
+.role-layout {
+  gap: 30px;
+}
+
+.role-bullets {
+  gap: 22px;
+}
+
+.profile-orbit-card {
+  margin-top: 10px;
+}
+
+.button.primary {
+  border-color: rgba(184, 204, 212, 0.45);
+  background: linear-gradient(135deg, #dbe5e8, #9fc3ca);
+  box-shadow: 0 16px 42px rgba(145, 199, 211, 0.16);
+}
+
+.button.primary:hover {
+  border-color: rgba(145, 199, 211, 0.42);
+}
+
+.proof-icon,
+.bullet-icon,
+.tool-chip svg {
+  border-color: rgba(145, 199, 211, 0.28);
+  background: rgba(145, 199, 211, 0.08);
+}
+
+.proof-icon svg,
+.skill-card-top svg,
+.bullet-icon svg,
+.work-style-card svg,
+.tool-chip svg,
+.education-card-top svg,
+.achievement svg {
+  color: var(--cyan);
+}
+
+.proof-item:hover,
+.timeline-card:hover,
+.skill-card:hover,
+.education-card:hover,
+.achievement:hover,
+.work-style-card:hover,
+.contact-link:hover {
+  border-color: rgba(145, 199, 211, 0.28);
+  background:
+    linear-gradient(145deg, rgba(145, 199, 211, 0.055), rgba(255, 255, 255, 0.018)),
+    rgba(30, 34, 35, 0.88);
+}
+
+.skill-meter span {
+  background: rgba(145, 199, 211, 0.72);
+}
+
+.hero-proof-rail .proof-item {
+  background:
+    linear-gradient(135deg, rgba(145, 199, 211, 0.075), transparent 46%),
+    linear-gradient(160deg, rgba(185, 183, 223, 0.055), rgba(255, 255, 255, 0.014)),
+    rgba(24, 29, 31, 0.86);
+}
+
+.timeline-card:nth-child(3n),
+.skill-card:nth-child(3n),
+.education-card:nth-child(3n),
+.work-style-card:nth-child(3n),
+.case-study-card:nth-child(3n) {
+  border-color: rgba(185, 183, 223, 0.18);
+  background:
+    linear-gradient(145deg, rgba(185, 183, 223, 0.058), rgba(255, 255, 255, 0.014)),
+    rgba(24, 29, 31, 0.86);
+}
+
+.skill-card::after,
+.education-card::after,
+.work-style-card::after {
+  background: rgba(145, 199, 211, 0.28);
+}
+
+.achievement:nth-child(3n),
+.bullet-row:nth-child(3n) {
+  border-color: rgba(168, 201, 180, 0.18);
+  background:
+    linear-gradient(145deg, rgba(168, 201, 180, 0.06), rgba(255, 255, 255, 0.014)),
+    rgba(24, 29, 31, 0.86);
+}
+
+.role-summary {
+  border-color: rgba(145, 199, 211, 0.2);
+  background:
+    linear-gradient(155deg, rgba(145, 199, 211, 0.09), rgba(185, 183, 223, 0.035) 54%, transparent),
+    rgba(24, 29, 31, 0.9);
+}
+
+.role-period {
+  border-color: rgba(145, 199, 211, 0.3);
+  color: var(--text);
+  background: rgba(145, 199, 211, 0.12);
+}
+
+@media (max-width: 1050px) {
+  .section {
+    padding: 92px 0;
+  }
+
+  .hero {
+    padding-bottom: 76px;
+  }
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: 76px 0;
+  }
+
+  .contact-section {
+    padding-top: 84px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .live-projects-grid,
+  .case-study-grid,
+  .skills-grid,
+  .achievement-grid,
+  .education-grid,
+  .work-style-grid,
+  .role-bullets {
+    gap: 18px;
+  }
+
+  .hero-proof-rail {
+    gap: 16px;
+    margin-top: 34px;
+  }
+}

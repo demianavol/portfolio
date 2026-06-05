@@ -3,25 +3,40 @@ import {
   ArrowUpRight,
   BadgeCheck,
   Bot,
+  BookOpen,
   BrainCircuit,
   BriefcaseBusiness,
   CalendarClock,
   CircuitBoard,
+  Code2,
+  Compass,
   ContactRound,
+  Cpu,
+  Dumbbell,
+  GitBranch,
   GraduationCap,
   Globe2,
   Languages,
+  Laptop,
+  Layers3,
   LineChart,
+  Lightbulb,
   Mail,
   MapPin,
   MessageCircle,
+  Network,
   PackageSearch,
   Phone,
+  Presentation,
   Rocket,
+  Send,
   ShieldCheck,
   ShoppingBag,
   Sparkles,
+  Store,
+  Table2,
   Target,
+  Wallet,
   Workflow,
   Zap,
   type LucideIcon,
@@ -53,14 +68,35 @@ const fadeUp = {
 
 const skillIcons: LucideIcon[] = [
   BrainCircuit,
-  ShoppingBag,
-  CircuitBoard,
-  PackageSearch,
+  Store,
+  Layers3,
+  Code2,
   LineChart,
   Languages,
 ];
 
+const proofIcons: LucideIcon[] = [BadgeCheck, ShieldCheck, Target];
 const roleBulletIcons: LucideIcon[] = [BriefcaseBusiness, Bot, ShoppingBag, PackageSearch, CircuitBoard];
+const achievementIcons: LucideIcon[] = [Workflow, Zap, Laptop, Rocket, Lightbulb];
+const educationIcons: LucideIcon[] = [GraduationCap, BookOpen, Globe2, Dumbbell];
+const workStyleIcons: LucideIcon[] = [Compass, Cpu, Network];
+const signalIcons: LucideIcon[] = [Workflow, ShoppingBag, Bot, Code2, BrainCircuit, Rocket];
+const toolIcons: LucideIcon[] = [
+  Bot,
+  BrainCircuit,
+  Code2,
+  Laptop,
+  Sparkles,
+  Presentation,
+  Layers3,
+  BookOpen,
+  Workflow,
+  Network,
+  CircuitBoard,
+  GitBranch,
+  Table2,
+  Wallet,
+];
 const publicUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
 const projectUrl = (link?: string) => publicUrl(link ?? "");
 
@@ -164,20 +200,24 @@ function Hero({
                 <p>{activeSignal.text}</p>
               </div>
               <div className="signal-chip-grid">
-                {profile.hero.signals.map((signal, index) => (
-                  <motion.button
-                    className={index === activeSignalIndex ? "signal-chip active" : "signal-chip"}
-                    key={signal.title}
-                    type="button"
-                    onClick={() => setActiveSignalIndex(index)}
-                    onMouseEnter={() => setActiveSignalIndex(index)}
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Sparkles size={14} aria-hidden="true" />
-                    {signal.title}
-                  </motion.button>
-                ))}
+                {profile.hero.signals.map((signal, index) => {
+                  const SignalIcon = signalIcons[index % signalIcons.length];
+
+                  return (
+                    <motion.button
+                      className={index === activeSignalIndex ? "signal-chip active" : "signal-chip"}
+                      key={signal.title}
+                      type="button"
+                      onClick={() => setActiveSignalIndex(index)}
+                      onMouseEnter={() => setActiveSignalIndex(index)}
+                      whileHover={{ y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <SignalIcon size={14} aria-hidden="true" />
+                      {signal.title}
+                    </motion.button>
+                  );
+                })}
               </div>
             </motion.div>
           ) : null}
@@ -222,16 +262,20 @@ function Hero({
       </div>
 
       <div className="proof-grid hero-proof-rail" aria-label={copy.aria.proofPoints}>
-        {profile.hero.proofPoints.map((point) => (
-          <div className="proof-item" key={point.label}>
-            <div className="proof-icon">
-              <BadgeCheck size={18} aria-hidden="true" />
+        {profile.hero.proofPoints.map((point, index) => {
+          const ProofIcon = proofIcons[index % proofIcons.length];
+
+          return (
+            <div className="proof-item" key={point.label}>
+              <div className="proof-icon">
+                <ProofIcon size={18} aria-hidden="true" />
+              </div>
+              <strong className="proof-stat">{point.stat}</strong>
+              <span>{point.label}</span>
+              <p>{point.detail}</p>
             </div>
-            <strong className="proof-stat">{point.stat}</strong>
-            <span>{point.label}</span>
-            <p>{point.detail}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className="hero-meta">
@@ -540,13 +584,17 @@ function Toolchain({ profile, copy }: PageProps) {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.65 }}
       >
-        {profile.tools.map((tool) => (
-          <div className="tool-chip" key={tool.name}>
-            <Zap size={16} aria-hidden="true" />
-            <strong>{tool.name}</strong>
-            <span>{tool.category}</span>
-          </div>
-        ))}
+        {profile.tools.map((tool, index) => {
+          const ToolIcon = toolIcons[index % toolIcons.length];
+
+          return (
+            <div className="tool-chip" key={tool.name}>
+              <ToolIcon size={16} aria-hidden="true" />
+              <strong>{tool.name}</strong>
+              <span>{tool.category}</span>
+            </div>
+          );
+        })}
       </motion.div>
     </Section>
   );
@@ -560,20 +608,24 @@ function Achievements({ profile, copy }: PageProps) {
       intro={copy.sections.achievements.intro}
     >
       <div className="achievement-grid">
-        {profile.achievements.map((achievement, index) => (
-          <motion.div
-            className="achievement"
-            key={achievement.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5, delay: index * 0.04 }}
-          >
-            <Target size={19} aria-hidden="true" />
-            <strong>{achievement.title}</strong>
-            <span>{achievement.text}</span>
-          </motion.div>
-        ))}
+        {profile.achievements.map((achievement, index) => {
+          const AchievementIcon = achievementIcons[index % achievementIcons.length];
+
+          return (
+            <motion.div
+              className="achievement"
+              key={achievement.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, delay: index * 0.04 }}
+            >
+              <AchievementIcon size={19} aria-hidden="true" />
+              <strong>{achievement.title}</strong>
+              <span>{achievement.text}</span>
+            </motion.div>
+          );
+        })}
       </div>
     </Section>
   );
@@ -588,29 +640,33 @@ function Education({ profile, copy }: PageProps) {
       intro={copy.sections.education.intro}
     >
       <div className="education-grid">
-        {profile.education.map((item, index) => (
-          <motion.article
-            className="education-card"
-            key={item.title}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.28 }}
-            transition={{ duration: 0.55, delay: index * 0.04 }}
-            variants={fadeUp}
-          >
-            <div className="education-card-top">
-              <GraduationCap size={21} aria-hidden="true" />
-              <span>{item.period}</span>
-            </div>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <div className="education-tags">
-              {item.tags.map((tag) => (
-                <span key={tag}>{tag}</span>
-              ))}
-            </div>
-          </motion.article>
-        ))}
+        {profile.education.map((item, index) => {
+          const EducationIcon = educationIcons[index % educationIcons.length];
+
+          return (
+            <motion.article
+              className="education-card"
+              key={item.title}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.28 }}
+              transition={{ duration: 0.55, delay: index * 0.04 }}
+              variants={fadeUp}
+            >
+              <div className="education-card-top">
+                <EducationIcon size={21} aria-hidden="true" />
+                <span>{item.period}</span>
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <div className="education-tags">
+                {item.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+            </motion.article>
+          );
+        })}
       </div>
     </Section>
   );
@@ -624,21 +680,25 @@ function WorkStyle({ profile, copy }: PageProps) {
       intro={copy.sections.workStyle.intro}
     >
       <div className="work-style-grid">
-        {profile.workStyle.map((item, index) => (
-          <motion.article
-            className="work-style-card"
-            key={item.title}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.32 }}
-            transition={{ duration: 0.55, delay: index * 0.05 }}
-            variants={fadeUp}
-          >
-            <Sparkles size={20} aria-hidden="true" />
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </motion.article>
-        ))}
+        {profile.workStyle.map((item, index) => {
+          const WorkStyleIcon = workStyleIcons[index % workStyleIcons.length];
+
+          return (
+            <motion.article
+              className="work-style-card"
+              key={item.title}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.32 }}
+              transition={{ duration: 0.55, delay: index * 0.05 }}
+              variants={fadeUp}
+            >
+              <WorkStyleIcon size={20} aria-hidden="true" />
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </motion.article>
+          );
+        })}
       </div>
     </Section>
   );
@@ -648,7 +708,7 @@ function Contact({ profile, copy }: PageProps) {
   const iconForContact: Record<Profile["contacts"][number]["kind"], LucideIcon> = {
     phone: Phone,
     email: Mail,
-    telegram: MessageCircle,
+    telegram: Send,
     whatsapp: MessageCircle,
     linkedin: Globe2,
   };
