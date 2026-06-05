@@ -205,7 +205,7 @@ export const profiles: Record<Language, Profile> = {
     identity: {
       name: "Демиан",
       location: "Россия, большие города / теплые страны / удаленно / релокация",
-      title: "Операции, ИИ и продуктовые системы",
+      title: "универсальный специалист",
       availability: "ИИ, онлайн-торговля, операционка, программирование, управление, внедрение гипотез",
     },
     hero: {
@@ -501,7 +501,7 @@ export const profiles: Record<Language, Profile> = {
     identity: {
       name: "Демиан",
       location: "Russia, major cities / warm countries / remote / relocation",
-      title: "Operations, AI and product systems",
+      title: "versatile specialist",
       availability: "AI, online commerce, operations, programming, management, hypothesis testing",
     },
     hero: {
@@ -925,7 +925,7 @@ export const uiCopy: Record<Language, UiCopy> = {
     hero: {
       timelineCta: "View Career Timeline",
       contactCta: "Contact Me",
-      visualEyebrow: "How I create value",
+      visualEyebrow: "Profile",
       portraitLabel: "Profile photo",
       portraitHudTop: "Personal layer",
       portraitHudBottom: "Execution engine",
