@@ -98,7 +98,7 @@ const toolIcons: LucideIcon[] = [
   Wallet,
 ];
 const publicUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
-const projectUrl = (link?: string) => publicUrl(link ?? "");
+const projectUrl = (link?: string) => (/^https?:\/\//.test(link ?? "") ? link ?? "" : publicUrl(link ?? ""));
 
 type PageProps = {
   profile: Profile;
@@ -344,13 +344,13 @@ function LiveProjects({ profile, copy }: PageProps) {
   const liveProjects = [
     {
       project: profile.projects[0],
-      url: publicUrl(profile.projects[0]?.link ?? "ultymylife/index.html"),
+      url: projectUrl(profile.projects[0]?.link ?? "ultymylife/index.html"),
       note: copy.sections.liveProjects.preview,
       previewImage: publicUrl("previews/ultymylife-preview.png"),
     },
     {
       project: profile.projects[1],
-      url: publicUrl(profile.projects[1]?.link ?? "dr-mix/index.html"),
+      url: projectUrl(profile.projects[1]?.link ?? "dr-mix/index.html"),
       note: copy.sections.liveProjects.preview,
       previewImage: publicUrl("previews/drmix-preview.png"),
     },

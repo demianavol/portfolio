@@ -338,7 +338,7 @@ export const profiles: Record<Language, Profile> = {
             text: "Улучшаю механику привычек, метрики прогресса и подробную страницу проекта.",
           },
         ],
-        link: "ultymylife/index.html",
+        link: "https://demianavol.github.io/ultymylife-landing/",
       },
       {
         name: "Dr. Mix / торговый веб-проект",
@@ -350,7 +350,7 @@ export const profiles: Record<Language, Profile> = {
           "Реализовал Node.js-сервер, хранение заявок и событий, работу с админским паролем, публичными страницами и закрытыми разделами.",
           "Подготовил деплой-документацию для Ubuntu, Nginx, PM2, HTTPS и платежной интеграции ЮKassa.",
         ],
-        link: "dr-mix/index.html",
+        link: "https://dr-mix.ru/",
       },
       {
         name: "ИИ-процессы и агенты",
@@ -634,7 +634,7 @@ export const profiles: Record<Language, Profile> = {
             text: "I am improving habit mechanics, progress metrics and the detailed project page.",
           },
         ],
-        link: "ultymylife/index.html",
+        link: "https://demianavol.github.io/ultymylife-landing/",
       },
       {
         name: "Dr. Mix / trading web project",
@@ -646,7 +646,7 @@ export const profiles: Record<Language, Profile> = {
           "Implemented a Node.js server, request and event storage, admin password flow, public pages and closed sections.",
           "Prepared deployment documentation for Ubuntu, Nginx, PM2, HTTPS and YooKassa payment integration.",
         ],
-        link: "dr-mix/index.html",
+        link: "https://dr-mix.ru/",
       },
       {
         name: "AI processes and agents",
