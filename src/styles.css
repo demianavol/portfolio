@@ -4306,6 +4306,12 @@ body::after {
     rgba(25, 28, 29, 0.84);
 }
 
+.live-project-card:nth-child(3) {
+  background:
+    linear-gradient(145deg, rgba(145, 199, 211, 0.1), rgba(255, 249, 238, 0.018) 48%),
+    rgba(23, 29, 31, 0.88);
+}
+
 .browser-preview-link::after {
   color: var(--text);
   background: rgba(18, 17, 15, 0.72);

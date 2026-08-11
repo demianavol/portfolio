@@ -30,6 +30,7 @@ export type Project = {
   impact: string[];
   caseStudy?: TitledText[];
   link?: string;
+  previewImage?: string;
 };
 
 export type SkillGroup = {
@@ -217,10 +218,10 @@ export const profiles: Record<Language, Profile> = {
       ],
       proofPoints: [
         {
-          stat: "10 мес.",
+          stat: "1 год 1 мес.",
           label: "рядом с собственником",
           detail:
-            "Закрываю операционные задачи в торговом бизнесе: площадки, опт, закупки, документы, сайты и ежедневное исполнение.",
+            "Работал напрямую с собственником торговой компании: сайты, маркетплейсы, B2B, логистика, импорт и автоматизация.",
         },
         {
           stat: "ИИ",
@@ -248,12 +249,12 @@ export const profiles: Record<Language, Profile> = {
         cta: "Подробнее",
       },
       {
-        period: "2025-2026",
+        period: "Август 2025 — Август 2026",
         label: "Резерв / бизнес-операции",
-        title: "Операционный координатор / помощник руководителя",
+        title: "Бизнес-помощник руководителя",
         description:
-          "Работаю в торговой компании «Резерв»: продажи, торговые площадки, оптовое направление, поставочные процессы, закупки, ИИ-автоматизация и ежедневное исполнение.",
-        metrics: ["Розница", "ИИ-агенты", "Сайты", "Юр. дела", "Операционка", "Коммерция", "Встречи", "Маркетинг"],
+          "Работал напрямую с собственником компании «Резерв»: развивал сайты, маркетплейсы, B2B, логистику, импортные поставки и внутреннюю автоматизацию.",
+        metrics: ["2 коммерческих сайта", "500+ fulfillment-компаний", "$100K+ импорт", "B2B и маркетплейсы"],
         targetId: "current-role",
         cta: "Подробнее",
       },
@@ -270,41 +271,45 @@ export const profiles: Record<Language, Profile> = {
       {
         period: "Параллельный трек",
         label: "Опыт основателя",
-        title: "Владелец продукта UltyMyLife",
+        title: "Основатель UltyMyLife",
         description:
-          "Сооснователь и владелец продукта UltyMyLife: мини-приложение в Telegram и экосистема управления жизнью для задач, привычек, дневника тренировок, сна и ментального фитнеса.",
-        metrics: ["10 месяцев разработки", "200+ активных пользователей", "Первая версия и обратная связь"],
+          "Основатель UltyMyLife — Telegram Native Ecosystem для задач, привычек, физических и ментальных тренировок, сна, дыхания, медитаций и личного прогресса.",
+        metrics: ["11 месяцев разработки", "200+ пользователей тестирования", "Резидент IT Park"],
         targetId: "ulty",
         cta: "Подробнее",
       },
     ],
     roles: [
       {
-        title: "Операционный координатор / помощник руководителя",
+        title: "Бизнес-помощник руководителя",
         organization: "Торговая компания «Резерв»",
-        period: "2025-2026",
+        period: "Август 2025 — Август 2026",
         summary:
-          "Я работаю рядом с собственником и закрываю задачи, которые напрямую влияют на продажи и торговые процессы: площадки, опт, закупки, документы, ИИ-автоматизация и сайт-каталог.",
+          "Работал напрямую с собственником и развивал внутренние IT-решения, автоматизацию, маркетплейсы, логистику, B2B-направление и операционные процессы бизнеса.",
         bullets: [
           {
-            title: "Операционное исполнение",
-            text: "Беру задачи от руководителя, раскладываю их на шаги, довожу до результата и держу в фокусе сроки, документы, площадки и коммерческие процессы.",
+            title: "Dr. Mix и REZERV",
+            text: "Самостоятельно разработал два коммерческих сайта: каталог, корзина, авторизация, личный кабинет, админ-панель, заказы, промокоды, UTM-метки, отзывы и мобильная версия.",
           },
           {
-            title: "ИИ-агенты для продаж",
-            text: "Настраиваю сценарии для автоматического прозвона, рассылок в мессенджерах и почте, чтобы ускорять первичный контакт с корпоративными клиентами.",
+            title: "Логистика и Telegram-заказы",
+            text: "Интегрировал СДЭК, Магнит Маркет и Яндекс Доставку: выбор ПВЗ, статусы и передача данных на склад. Создал Telegram-систему уведомлений сотрудников и покупателей.",
           },
           {
-            title: "Оптовый канал на Avito",
-            text: "С нуля упаковал оптовое направление: карточки, коммерческую подачу, динамические прайс-листы и переговоры с клиентами.",
+            title: "AI-маркетолог",
+            text: "Создал сценарий на n8n и LLM: запрос приходит через Telegram, AI генерирует контент, сохраняет результат в Google Sheets и отправляет его пользователю.",
           },
           {
-            title: "Поставки и документы",
-            text: "Помогаю держать в порядке задачи по поставкам, документам и согласованиям, где важны сроки, точность и понятная коммуникация.",
+            title: "B2B и маркетплейсы",
+            text: "Развил оптовое направление на Avito с нуля, работал с Ozon и Wildberries, исследовал рынок и конкурентов, готовил коммерческие предложения и вёл переговоры.",
           },
           {
-            title: "Dr. Mix и торговая витрина",
-            text: "Собрал коммерческий сайт с лендингом, каталогом, заявками, админкой, аналитикой и рабочими страницами для розницы, опта и операций.",
+            title: "500+ fulfillment-компаний",
+            text: "Исследовал и сравнил более 500 операторов, провёл первичные переговоры и помог закрыть логистику в Южном, Северо-Западном, Центральном и Уральском регионах.",
+          },
+          {
+            title: "Импорт и инфраструктура",
+            text: "Участвовал в поставках из Китая стоимостью $100K+, работал с документами и грузами. Настроил GitHub, версии и откаты, HTTPS/TLS, Cloudflare и базовую защиту сайтов.",
           },
         ],
       },
@@ -314,31 +319,41 @@ export const profiles: Record<Language, Profile> = {
         name: "UltyMyLife",
         type: "Собственный продукт",
         description:
-          "Telegram-продукт для задач, привычек, тренировок и сна. Я спроектировал логику, сценарии и довел первую версию до тестирования.",
+          "Telegram Native Ecosystem для задач, привычек, физических и ментальных тренировок, сна, дыхания, медитаций и личного прогресса. Прошёл путь от идеи до работающего MVP.",
         impact: [
-          "Архитектура и сценарии продукта с нуля.",
-          "10 месяцев разработки вместе с техническим партнером.",
-          "200+ пользователей в тестировании и развитие по обратной связи.",
+          "11 месяцев разработки, 200+ пользователей тестирования и обратная связь от 50+ человек.",
+          "Резидент IT Park Татарстана после отбора в бизнес-инкубатор.",
+          "ЮKassa, TON и Telegram Stars; privacy policy, terms и юридическая проработка для РФ.",
+          "Privacy-first аналитика, AI-анализ модулей, маркетинговый и support-агенты.",
         ],
         caseStudy: [
           {
-            title: "Идея",
-            text: "Единая система для задач, привычек, тренировок, сна и восстановления внутри Telegram.",
+            title: "Продукт",
+            text: "Единая система внутри Telegram: задачи, привычки, тренировки, сон, дыхание, медитации и прогресс.",
           },
           {
-            title: "Моя роль",
-            text: "Проектирую логику, сценарии, экраны и понятные задачи для разработки.",
+            title: "Основатель",
+            text: "Сформировал УТП, архитектуру, сценарии, roadmap и backlog; переводил продуктовые идеи в технические требования.",
           },
           {
-            title: "Что уже сделано",
-            text: "Первая версия работает, продукт протестирован на 200+ пользователях.",
+            title: "MVP и редизайн",
+            text: "Запустил работающий MVP и за 2 месяца полностью переработал интерфейс на основе обратной связи пользователей.",
           },
           {
-            title: "Что развиваю дальше",
-            text: "Улучшаю механику привычек, метрики прогресса и подробную страницу проекта.",
+            title: "Legal и платежи",
+            text: "Подготовил юридические документы и подключил ЮKassa, TON и Telegram Stars.",
+          },
+          {
+            title: "AI и аналитика",
+            text: "Развиваю AI-анализ разделов, маркетингового и support-агентов; собираю только минимальные зашифрованные метрики.",
+          },
+          {
+            title: "Следующий этап",
+            text: "Проверяю гипотезы удержания и мотивации, готовлю продукт к монетизации, масштабированию и SEO/GEO-продвижению.",
           },
         ],
         link: "https://demianavol.github.io/ultymylife-landing/",
+        previewImage: "previews/ultymylife-preview.png",
       },
       {
         name: "Dr. Mix / торговый веб-проект",
@@ -351,12 +366,26 @@ export const profiles: Record<Language, Profile> = {
           "Подготовил деплой-документацию для Ubuntu, Nginx, PM2, HTTPS и платежной интеграции ЮKassa.",
         ],
         link: "https://dr-mix.ru/",
+        previewImage: "previews/drmix-preview.png",
+      },
+      {
+        name: "REZERV / опт и розница",
+        type: "Коммерческий сайт и B2B-витрина",
+        description:
+          "Сайт торговой компании REZERV с отдельными сценариями для розничных покупателей и B2B-партнёров, каталогом, заказами и прямой коммуникацией.",
+        impact: [
+          "Разделил пользовательские пути для розницы и оптовых закупок.",
+          "Связал каталог, авторизацию, заказы и операционные процессы компании.",
+          "Подготовил адаптивный интерфейс и публичный запуск на собственном домене.",
+        ],
+        link: "https://rezerv.biz/",
+        previewImage: "previews/rezerv-preview.png",
       },
       {
         name: "ИИ-процессы и агенты",
         type: "Автоматизация / системы продуктивности",
         description:
-          "Настраивал ИИ-ассистентов и агентные сценарии для привлечения клиентов, прозвона, рассылок, исследований, написания текстов, поддержки процессов, генерации сайтов и декомпозиции задач.",
+          "Настраивал ИИ-ассистентов и агентные сценарии для маркетинга, исследований, написания текстов, поддержки процессов, генерации сайтов и декомпозиции задач.",
         impact: [
           "Снизил трение в повторяющихся бизнес-задачах.",
           "Ускорил тестирование идей и подготовку рабочих черновиков.",
@@ -513,10 +542,10 @@ export const profiles: Record<Language, Profile> = {
       ],
       proofPoints: [
         {
-          stat: "10 mo.",
+          stat: "1 yr 1 mo.",
           label: "close to the owner",
           detail:
-            "Closing operational tasks in a trading business: platforms, wholesale, procurement, documents, websites and daily execution.",
+            "Worked directly with the owner of a trading company across websites, marketplaces, B2B, logistics, imports and automation.",
         },
         {
           stat: "AI",
@@ -544,12 +573,12 @@ export const profiles: Record<Language, Profile> = {
         cta: "Learn more",
       },
       {
-        period: "2025-2026",
+        period: "Aug 2025 — Aug 2026",
         label: "Rezerv / business operations",
-        title: "Operations Coordinator / Executive Assistant",
+        title: "Executive Business Assistant",
         description:
-          "Working in the trading company Rezerv: sales, marketplaces, wholesale direction, supply workflows, procurement, AI automation and daily execution.",
-        metrics: ["Retail", "AI agents", "Websites", "Legal tasks", "Operations", "Commerce", "Meetings", "Marketing"],
+          "Worked directly with the owner of Rezerv across websites, marketplaces, B2B, logistics, imports and internal automation.",
+        metrics: ["2 commercial websites", "500+ fulfillment companies", "$100K+ imports", "B2B and marketplaces"],
         targetId: "current-role",
         cta: "Learn more",
       },
@@ -566,41 +595,45 @@ export const profiles: Record<Language, Profile> = {
       {
         period: "Parallel track",
         label: "Founder experience",
-        title: "UltyMyLife product owner",
+        title: "Founder of UltyMyLife",
         description:
-          "Co-founder and Product Owner of UltyMyLife: a Telegram Mini App and Life OS ecosystem for tasks, habits, workout diaries, sleep, and mental fitness.",
-        metrics: ["10-month build cycle", "200+ active users", "MVP and feedback"],
+          "Founder of UltyMyLife, a Telegram Native Ecosystem for tasks, habits, physical and mental training, sleep, breathing, meditation and personal progress.",
+        metrics: ["11-month build cycle", "200+ testing users", "IT Park resident"],
         targetId: "ulty",
         cta: "Learn more",
       },
     ],
     roles: [
       {
-        title: "Operations Coordinator / Executive Assistant",
+        title: "Executive Business Assistant",
         organization: "Rezerv Trading Company",
-        period: "2025-2026",
+        period: "Aug 2025 — Aug 2026",
         summary:
-          "I work close to the owner and close tasks that directly affect sales and trading workflows: marketplaces, wholesale, procurement, documents, AI automation and the catalog website.",
+          "Worked directly with the owner on internal IT solutions, automation, marketplaces, logistics, B2B and day-to-day business operations.",
         bullets: [
           {
-            title: "Operational execution",
-            text: "I take tasks from the manager, break them down, bring them to a result and keep deadlines, documents, platforms and commercial processes in focus.",
+            title: "Dr. Mix and REZERV",
+            text: "Built two commercial websites with catalogs, carts, authentication, customer accounts, admin panels, orders, promo codes, UTM tracking, reviews and responsive layouts.",
           },
           {
-            title: "AI agents for sales",
-            text: "I configure scenarios for automated calls, messenger outreach and email sequences to speed up first contact with corporate clients.",
+            title: "Logistics and Telegram orders",
+            text: "Integrated CDEK, Magnit Market and Yandex Delivery with pickup points, order statuses and warehouse handoff, plus Telegram notifications for staff and customers.",
           },
           {
-            title: "Wholesale Avito channel",
-            text: "I packaged the wholesale direction from scratch: listings, commercial positioning, dynamic price lists and customer negotiations.",
+            title: "AI marketing workflow",
+            text: "Built an n8n and LLM workflow: requests arrive through Telegram, AI generates content, saves it to Google Sheets and sends the result back to the user.",
           },
           {
-            title: "Supply tasks and documents",
-            text: "I help keep supply tasks, documents and approvals organized where timing, precision and clear communication matter.",
+            title: "B2B and marketplaces",
+            text: "Built the wholesale Avito channel from scratch, worked with Ozon and Wildberries, researched markets and competitors, prepared proposals and led B2B negotiations.",
           },
           {
-            title: "Dr. Mix and trading storefront",
-            text: "I built a commercial website with a landing page, catalog, requests, admin panel, analytics and working pages for retail, wholesale and operations.",
+            title: "500+ fulfillment companies",
+            text: "Researched and compared more than 500 operators, held initial negotiations and helped cover the South, Northwest, Central and Ural regions of Russia.",
+          },
+          {
+            title: "Imports and infrastructure",
+            text: "Supported imports from China worth $100K+, including suppliers, logistics and documents. Set up GitHub versioning and rollback, HTTPS/TLS, Cloudflare and baseline security.",
           },
         ],
       },
@@ -610,31 +643,41 @@ export const profiles: Record<Language, Profile> = {
         name: "UltyMyLife",
         type: "Own product",
         description:
-          "A Telegram product for tasks, habits, workouts and sleep. I designed the logic, scenarios and brought the first version to testing.",
+          "A Telegram Native Ecosystem for tasks, habits, physical and mental training, sleep, breathing, meditation and personal progress. I took it from idea to a working MVP.",
         impact: [
-          "Product architecture and scenarios from scratch.",
-          "10 months of development together with a technical partner.",
-          "200+ users in testing and development through feedback.",
+          "11 months of development, 200+ testing users and feedback from 50+ people.",
+          "Resident of IT Park Tatarstan after selection by its business incubator.",
+          "YooKassa, TON and Telegram Stars, plus privacy policy, terms and legal work for Russia.",
+          "Privacy-first analytics, AI module analysis, marketing and support agents.",
         ],
         caseStudy: [
           {
-            title: "Idea",
-            text: "One system for tasks, habits, workouts, sleep and recovery inside Telegram.",
+            title: "Product",
+            text: "One Telegram-native system for tasks, habits, training, sleep, breathing, meditation and progress.",
           },
           {
-            title: "My role",
-            text: "I design logic, scenarios, screens and clear tasks for development.",
+            title: "Founder",
+            text: "Defined the value proposition, architecture, user journeys, roadmap and backlog, translating product ideas into technical requirements.",
           },
           {
-            title: "Built so far",
-            text: "The first version works, and the product has been tested with 200+ users.",
+            title: "MVP and redesign",
+            text: "Launched a working MVP and completed a two-month interface redesign driven by user feedback.",
           },
           {
-            title: "Next focus",
-            text: "I am improving habit mechanics, progress metrics and the detailed project page.",
+            title: "Legal and payments",
+            text: "Prepared legal documents and connected YooKassa, TON and Telegram Stars.",
+          },
+          {
+            title: "AI and analytics",
+            text: "Developing AI analysis, marketing and support agents while collecting only minimal encrypted product metrics.",
+          },
+          {
+            title: "Next stage",
+            text: "Testing retention and motivation hypotheses and preparing monetization, scaling and SEO/GEO growth.",
           },
         ],
         link: "https://demianavol.github.io/ultymylife-landing/",
+        previewImage: "previews/ultymylife-preview.png",
       },
       {
         name: "Dr. Mix / trading web project",
@@ -647,12 +690,26 @@ export const profiles: Record<Language, Profile> = {
           "Prepared deployment documentation for Ubuntu, Nginx, PM2, HTTPS and YooKassa payment integration.",
         ],
         link: "https://dr-mix.ru/",
+        previewImage: "previews/drmix-preview.png",
+      },
+      {
+        name: "REZERV / retail and wholesale",
+        type: "Commercial website and B2B storefront",
+        description:
+          "A trading company website with separate journeys for retail customers and B2B partners, covering catalog, orders and direct commercial communication.",
+        impact: [
+          "Separated retail and wholesale purchasing journeys.",
+          "Connected catalog, authentication, orders and operational workflows.",
+          "Prepared a responsive interface and public launch on a dedicated domain.",
+        ],
+        link: "https://rezerv.biz/",
+        previewImage: "previews/rezerv-preview.png",
       },
       {
         name: "AI processes and agents",
         type: "Automation / Productivity Systems",
         description:
-          "Configured AI assistants and agent scenarios for customer acquisition, calls, outreach, research, writing, process support, site generation and task decomposition.",
+          "Configured AI assistants and agent scenarios for marketing, research, writing, process support, site generation and task decomposition.",
         impact: [
           "Reduced friction in repetitive business tasks.",
           "Improved speed of testing ideas and producing working drafts.",
@@ -835,7 +892,7 @@ export const uiCopy: Record<Language, UiCopy> = {
       role: {
         eyebrow: "Операционная роль",
         title: "Операции, продажи и ИИ-автоматизация в торговом бизнесе",
-        current: "Сейчас",
+        current: "Завершённый опыт",
       },
       ulty: {
         eyebrow: "Ключевой кейс",
@@ -936,7 +993,7 @@ export const uiCopy: Record<Language, UiCopy> = {
       role: {
         eyebrow: "Operating role",
         title: "Operations, sales and AI automation in a trading business",
-        current: "Current",
+        current: "Completed role",
       },
       ulty: {
         eyebrow: "Key case",

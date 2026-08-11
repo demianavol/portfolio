@@ -52,6 +52,7 @@ import {
   type TimelineItem,
   type UiCopy,
 } from "./data/profile";
+import { selectLiveProjects } from "./data/liveProjects";
 
 type SectionProps = {
   eyebrow?: string;
@@ -341,20 +342,7 @@ function Timeline({ profile, copy }: PageProps) {
 }
 
 function LiveProjects({ profile, copy }: PageProps) {
-  const liveProjects = [
-    {
-      project: profile.projects[0],
-      url: projectUrl(profile.projects[0]?.link ?? "ultymylife/index.html"),
-      note: copy.sections.liveProjects.preview,
-      previewImage: publicUrl("previews/ultymylife-preview.png"),
-    },
-    {
-      project: profile.projects[1],
-      url: projectUrl(profile.projects[1]?.link ?? "dr-mix/index.html"),
-      note: copy.sections.liveProjects.preview,
-      previewImage: publicUrl("previews/drmix-preview.png"),
-    },
-  ].filter(({ project }) => Boolean(project));
+  const liveProjects = selectLiveProjects(profile.projects);
 
   return (
     <Section
@@ -364,7 +352,7 @@ function LiveProjects({ profile, copy }: PageProps) {
       intro={copy.sections.liveProjects.intro}
     >
       <div className="live-projects-grid">
-        {liveProjects.map(({ project, url, note, previewImage }, index) => (
+        {liveProjects.map((project, index) => (
           <motion.article
             className="live-project-card"
             key={project.name}
@@ -377,19 +365,36 @@ function LiveProjects({ profile, copy }: PageProps) {
               <span>{project.type}</span>
               <h3>{project.name}</h3>
               <p>{project.description}</p>
-              <a className="button secondary compact-button" href={url} target="_blank" rel="noreferrer">
+              <a
+                className="button secondary compact-button"
+                href={projectUrl(project.link)}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {copy.sections.liveProjects.open}
                 <ArrowUpRight size={17} aria-hidden="true" />
               </a>
             </div>
-            <div className="browser-preview" aria-label={`${note}: ${project.name}`}>
+            <div
+              className="browser-preview"
+              aria-label={`${copy.sections.liveProjects.preview}: ${project.name}`}
+            >
               <div className="browser-preview-bar" aria-hidden="true">
                 <span />
                 <span />
                 <span />
               </div>
-              <a className="browser-preview-link" href={url} target="_blank" rel="noreferrer">
-                <img src={previewImage} alt={`${note}: ${project.name}`} loading="lazy" />
+              <a
+                className="browser-preview-link"
+                href={projectUrl(project.link)}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={publicUrl(project.previewImage)}
+                  alt={`${copy.sections.liveProjects.preview}: ${project.name}`}
+                  loading="lazy"
+                />
               </a>
             </div>
           </motion.article>
