@@ -248,7 +248,7 @@ function Hero({
           </div>
 
           <figure className="profile-photo-frame" aria-label={copy.hero.portraitLabel}>
-            <img src={publicUrl("profile-photo.jpg")} alt={profile.identity.name} />
+            <img src={publicUrl("profile-photo.png")} alt={profile.identity.name} />
           </figure>
 
           <div className="portrait-facts" aria-label={copy.aria.proofPoints}>
