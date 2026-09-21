@@ -63,7 +63,7 @@ export function InteractivePortrait({ imageSrc }: InteractivePortraitProps) {
     const frame = new THREE.Mesh(
       new THREE.RingGeometry(1.76, 1.84, 96),
       new THREE.MeshBasicMaterial({
-        color: "#c6ff57",
+        color: "#2997ff",
         transparent: true,
         opacity: 0.32,
       }),
@@ -86,7 +86,7 @@ export function InteractivePortrait({ imageSrc }: InteractivePortraitProps) {
     const particles = new THREE.Points(
       particlesGeometry,
       new THREE.PointsMaterial({
-        color: "#c6ff57",
+        color: "#2997ff",
         size: 0.018,
         transparent: true,
         opacity: 0.58,
@@ -94,10 +94,10 @@ export function InteractivePortrait({ imageSrc }: InteractivePortraitProps) {
     );
     scene.add(particles);
 
-    const keyLight = new THREE.PointLight("#c6ff57", 1.6, 8);
+    const keyLight = new THREE.PointLight("#2997ff", 1.6, 8);
     keyLight.position.set(1.8, 1.8, 3.5);
     scene.add(keyLight);
-    const fillLight = new THREE.PointLight("#7de7ff", 1.2, 8);
+    const fillLight = new THREE.PointLight("#00d2ff", 1.2, 8);
     fillLight.position.set(-2.4, -0.8, 3.2);
     scene.add(fillLight);
     scene.add(new THREE.AmbientLight("#ffffff", 1.55));

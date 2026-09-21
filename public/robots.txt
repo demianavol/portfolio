@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://demianavolstiyniy.ru/sitemap.xml

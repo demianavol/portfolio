@@ -4,3 +4,5 @@ dist/
 *.tsbuildinfo
 .DS_Store
 ultymylife-landing/
+.codex-local/
+graphify-out/

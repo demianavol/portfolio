@@ -274,7 +274,7 @@ export const profiles: Record<Language, Profile> = {
         title: "Основатель UltyMyLife",
         description:
           "Основатель UltyMyLife — Telegram Native Ecosystem для задач, привычек, физических и ментальных тренировок, сна, дыхания, медитаций и личного прогресса.",
-        metrics: ["11 месяцев разработки", "200+ пользователей тестирования", "Резидент IT Park"],
+        metrics: ["~1 год разработки", "1600+ пользователей", "Резидент IT Park"],
         targetId: "ulty",
         cta: "Подробнее",
       },
@@ -321,7 +321,7 @@ export const profiles: Record<Language, Profile> = {
         description:
           "Telegram Native Ecosystem для задач, привычек, физических и ментальных тренировок, сна, дыхания, медитаций и личного прогресса. Прошёл путь от идеи до работающего MVP.",
         impact: [
-          "11 месяцев разработки, 200+ пользователей тестирования и обратная связь от 50+ человек.",
+          "Около года непрерывной разработки, 1600+ зарегистрированных пользователей.",
           "Резидент IT Park Татарстана после отбора в бизнес-инкубатор.",
           "ЮKassa, TON и Telegram Stars; privacy policy, terms и юридическая проработка для РФ.",
           "Privacy-first аналитика, AI-анализ модулей, маркетинговый и support-агенты.",
@@ -598,7 +598,7 @@ export const profiles: Record<Language, Profile> = {
         title: "Founder of UltyMyLife",
         description:
           "Founder of UltyMyLife, a Telegram Native Ecosystem for tasks, habits, physical and mental training, sleep, breathing, meditation and personal progress.",
-        metrics: ["11-month build cycle", "200+ testing users", "IT Park resident"],
+        metrics: ["~1-year build cycle", "1600+ registered users", "IT Park resident"],
         targetId: "ulty",
         cta: "Learn more",
       },
@@ -645,7 +645,7 @@ export const profiles: Record<Language, Profile> = {
         description:
           "A Telegram Native Ecosystem for tasks, habits, physical and mental training, sleep, breathing, meditation and personal progress. I took it from idea to a working MVP.",
         impact: [
-          "11 months of development, 200+ testing users and feedback from 50+ people.",
+          "Approximately 1 year of continuous development, 1600+ registered users.",
           "Resident of IT Park Tatarstan after selection by its business incubator.",
           "YooKassa, TON and Telegram Stars, plus privacy policy, terms and legal work for Russia.",
           "Privacy-first analytics, AI module analysis, marketing and support agents.",
