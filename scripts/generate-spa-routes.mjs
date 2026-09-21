@@ -11,5 +11,7 @@ if (fs.existsSync(indexPath)) {
     fs.mkdirSync(routeDir, { recursive: true });
     fs.copyFileSync(indexPath, path.join(routeDir, "index.html"));
   }
-  console.log("✓ SPA static fallback routes generated: /project, /product, /business");
+  // Also write 404.html for GitHub Pages fallback
+  fs.copyFileSync(indexPath, path.join(distDir, "404.html"));
+  console.log("✓ SPA static fallback routes generated: /project, /product, /business and 404.html");
 }
