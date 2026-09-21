@@ -11860,6 +11860,233 @@ body:has(.business-page-root) .site-footer {
   }
 }
 
+/* --------------------------------------------------------------------------
+   FINAL CONTENT-HIERARCHY PASS STYLES
+   -------------------------------------------------------------------------- */
+
+/* Core Tools Block at Upper Level (Hero) */
+.hero-core-tools-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.core-tools-lead {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #86868b;
+}
+
+.core-tools-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.core-tool-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #d1d1d6;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+
+.core-tool-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* IT Park Credibility Badge (Point 4) */
+.ulty-eyebrow-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.itpark-credibility-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #e5e5ea;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.itpark-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #30d158;
+  box-shadow: 0 0 8px rgba(48, 209, 88, 0.5);
+}
+
+/* Proof Metrics 5-Columns & Alignment Consistency */
+.proof-metrics-five-cols {
+  grid-template-columns: repeat(5, 1fr) !important;
+}
+
+.proof-metric-item {
+  min-height: 100px;
+  justify-content: space-between;
+}
+
+.proof-metric-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Card Sublabel Uniformity (Point 5) */
+.aligned-card-sublabel {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.35 !important;
+  color: #86868b !important;
+  text-transform: uppercase !important;
+  margin-top: auto !important;
+}
+
+/* Dr. Mix Quick Project Facts (Point 7) */
+.drmix-quick-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.quick-fact-card {
+  padding: 16px;
+  background: #161618;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 104px;
+  box-sizing: border-box;
+}
+
+.quick-fact-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #86868b;
+  margin-bottom: 6px;
+}
+
+.quick-fact-val {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f5f5f7;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.quick-fact-sub {
+  font-size: 11px;
+  color: #a1a1a6;
+  line-height: 1.35;
+  margin-top: auto;
+}
+
+.quick-fact-stack-card {
+  justify-content: flex-start;
+}
+
+.quick-fact-stack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.stack-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #c8c8cc;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+}
+
+/* Single CTA styling & clickable screenshot (Point 6) */
+.browser-screen-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.browser-screen-link:hover .browser-screen-overlay {
+  opacity: 1;
+}
+
+.browser-action-row.single-cta-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.single-cta-row .apple-browser-action-btn {
+  max-width: 320px;
+  width: 100%;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .drmix-quick-facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .proof-metrics-five-cols {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .proof-metrics-five-cols .proof-metric-item:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  .drmix-quick-facts-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .hero-core-tools-container {
+    margin-top: 18px;
+    padding-top: 14px;
+  }
+}
+
 
 
 

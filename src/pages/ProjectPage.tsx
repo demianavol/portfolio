@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useRouter } from "../router";
 import { CV_LINKS, CONTACT_INFO } from "../data/portfolioData";
 import { ProjectProofMetrics } from "../components/ProjectProofMetrics";
@@ -9,19 +8,11 @@ import { ProjectSkillsThreeColumns } from "../components/ProjectSkillsThreeColum
 import { DomainAndTech } from "../components/DomainAndTech";
 import { DesktopBrowserMockup } from "../components/DesktopBrowserMockup";
 import { ProjectContactApple } from "../components/ProjectContactApple";
-import {
-  FileText,
-  Send,
-  ArrowDown,
-  ExternalLink,
-  ChevronDown,
-  ChevronUp,
-} from "lucide-react";
+import { FileText, Send, ArrowDown } from "lucide-react";
 
 export function ProjectPage() {
   const { language } = useRouter();
   const isRu = language === "ru";
-  const [showDrMixDetails, setShowDrMixDetails] = useState(false);
 
   const cvHref = language === "en" ? CV_LINKS.projectEn : CV_LINKS.projectRu;
   const cvLabel = isRu ? "Скачать CV (PDF)" : "Download CV (PDF)";
@@ -34,13 +25,14 @@ export function ProjectPage() {
       <section className="project-edge-section section-bg-main" id="hero">
         <div className="project-content-container">
           <div className="hero-apple-grid">
-            {/* Left: Typography & One Dominant Narrative */}
+            {/* Left: Typography, Narrative & Core Tools */}
             <div className="hero-narrative-col">
               <div className="hero-eyebrow-row">
                 <span className="hero-eyebrow-pill">
                   <span className="hero-pulse-dot" />
                   <span>PROJECT MANAGER / IT PROJECT MANAGER</span>
                 </span>
+                <span className="hero-domain-pill">Digital · IT · AI · Operations</span>
                 <span className="hero-location-pill">
                   {isRu ? "Удалённо · Готов к релокации" : "Remote · Open to relocation"}
                 </span>
@@ -55,8 +47,8 @@ export function ProjectPage() {
 
               <p className="hero-apple-statement">
                 {isRu
-                  ? "Веду digital- и кросс-функциональные проекты от неопределённой задачи до работающего production-результата."
-                  : "Leading digital and cross-functional initiatives from ambiguous goals to dependable production software."}
+                  ? "Сквозное ведение digital- и технических продуктов: беру ответственность за поставку от задачи до работающего production-релиза, снимаю блокеры и синхронизирую инженерию с бизнесом."
+                  : "End-to-end delivery of digital and technical products: taking ownership from requirements to reliable production release, clearing blockers, and bridging engineering with business."}
               </p>
 
               {/* Action Buttons: Primary White + Secondary Transparent */}
@@ -81,9 +73,24 @@ export function ProjectPage() {
                   <span>Telegram</span>
                 </a>
               </div>
+
+              {/* Compact Core Tools Block at Upper Level */}
+              <div className="hero-core-tools-container">
+                <span className="core-tools-lead">{isRu ? "Core tools:" : "Core tools:"}</span>
+                <div className="core-tools-pills-row">
+                  <span className="core-tool-pill">Notion</span>
+                  <span className="core-tool-pill">YouGile</span>
+                  <span className="core-tool-pill">Google Sheets</span>
+                  <span className="core-tool-pill">GitHub</span>
+                  <span className="core-tool-pill">n8n</span>
+                  <span className="core-tool-pill">REST API</span>
+                  <span className="core-tool-pill">Codex</span>
+                  <span className="core-tool-pill">ChatGPT</span>
+                </div>
+              </div>
             </div>
 
-            {/* Right: Calm Profile Visual with 3 Floating Proof Facts */}
+            {/* Right: Profile Visual with 3 Distinct Proof Badges */}
             <div className="hero-visual-col">
               <div className="hero-profile-surface">
                 <div className="profile-img-wrap">
@@ -96,10 +103,10 @@ export function ProjectPage() {
                   />
                 </div>
 
-                {/* 3 Floating Facts */}
+                {/* 3 Floating Facts (Deduplicated, Distinct Proofs) */}
                 <div className="floating-fact-badge fact-exp">
                   <strong className="fact-val">3+</strong>
-                  <span className="fact-lbl">{isRu ? "года опыта в IT & проектах" : "years relevant experience"}</span>
+                  <span className="fact-lbl">{isRu ? "года в IT & проектах" : "years relevant experience"}</span>
                 </div>
 
                 <div className="floating-fact-badge fact-users">
@@ -108,8 +115,8 @@ export function ProjectPage() {
                 </div>
 
                 <div className="floating-fact-badge fact-itpark">
-                  <strong className="fact-val">IT Park</strong>
-                  <span className="fact-lbl">{isRu ? "Официальный резидент" : "Incubator Resident"}</span>
+                  <strong className="fact-val">Ownership</strong>
+                  <span className="fact-lbl">{isRu ? "Сквозной delivery до релиза" : "End-to-end delivery"}</span>
                 </div>
               </div>
             </div>
@@ -136,14 +143,14 @@ export function ProjectPage() {
       </section>
 
       {/* ------------------------------------------------------------------
-          4. DR. MIX — STREAMLINED HIGH-IMPACT CASE (Edge-to-edge #111113)
+          4. DR. MIX — HIGH-VELOCITY TECHNICAL DELIVERY (Edge-to-edge #111113)
           ------------------------------------------------------------------ */}
       <section className="project-edge-section section-bg-alt" id="dr-mix">
         <div className="project-content-container">
           <div className="drmix-clean-layout">
             <div className="case-meta-header">
               <span className="case-eyebrow-pill">
-                {isRu ? "Личная инженерная реализация" : "Solo Full-Stack Build"}
+                {isRu ? "Личная инженерная реализация • Скорость & Запуск" : "Solo Full-Stack Build • Speed & Delivery"}
               </span>
               <span className="case-meta-pill">E-commerce • Live</span>
             </div>
@@ -153,87 +160,52 @@ export function ProjectPage() {
                 <h2 className="clean-case-title">DR. MIX</h2>
                 <p className="clean-case-tagline">
                   {isRu
-                    ? "От идеи до первых реальных заказов примерно за 1 месяц."
-                    : "From idea to first real orders in ~1 month."}
+                    ? "Скоростной запуск e-commerce под ключ: от ТЗ до работающих онлайн-заказов за ~1 месяц без сторонних агентств."
+                    : "Rapid turnkey e-commerce launch: from requirements to live customer orders in ~1 month without agency spend."}
                 </p>
               </div>
-
-              <a
-                href="https://dr-mix.ru/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="apple-quiet-link-btn"
-              >
-                <span>dr-mix.ru</span>
-                <ExternalLink size={14} />
-              </a>
             </div>
 
-            {/* Level 1: 3 Proof Facts Directly Below Headline */}
-            <div className="drmix-three-proofs">
-              <div className="proof-box">
-                <strong className="proof-val">~1 {isRu ? "месяц" : "month"}</strong>
-                <span className="proof-lbl">{isRu ? "Сроки реализации" : "Velocity"}</span>
+            {/* Quick Project Facts Grid (Point 7: Compact, Scannable, Replaces Long Prose) */}
+            <div className="drmix-quick-facts-grid">
+              <div className="quick-fact-card">
+                <span className="quick-fact-lbl aligned-card-sublabel">{isRu ? "Сроки / Timeline" : "Timeline"}</span>
+                <strong className="quick-fact-val">~1 {isRu ? "месяц" : "month"}</strong>
+                <span className="quick-fact-sub">{isRu ? "От идеи до первых заказов" : "From zero to live orders"}</span>
               </div>
-              <div className="proof-box">
-                <strong className="proof-val">Solo execution</strong>
-                <span className="proof-lbl">{isRu ? "Без подрядчиков" : "Zero agency spend"}</span>
+              <div className="quick-fact-card">
+                <span className="quick-fact-lbl aligned-card-sublabel">{isRu ? "Команда / Team" : "Team"}</span>
+                <strong className="quick-fact-val">Solo</strong>
+                <span className="quick-fact-sub">{isRu ? "Full-stack разработка и запуск" : "Full-stack build & launch"}</span>
               </div>
-              <div className="proof-box">
-                <strong className="proof-val">{isRu ? "Реальные заказы" : "Real orders"}</strong>
-                <span className="proof-lbl">{isRu ? "Боевая коммерция" : "Live production"}</span>
+              <div className="quick-fact-card">
+                <span className="quick-fact-lbl aligned-card-sublabel">{isRu ? "Бюджет / Budget" : "Budget"}</span>
+                <strong className="quick-fact-val">{isRu ? "Минимальный" : "Limited"}</strong>
+                <span className="quick-fact-sub">{isRu ? "$0 затрат на агентства" : "$0 agency spend"}</span>
+              </div>
+              <div className="quick-fact-card quick-fact-stack-card">
+                <span className="quick-fact-lbl aligned-card-sublabel">{isRu ? "Стек / Stack" : "Stack"}</span>
+                <div className="quick-fact-stack-chips">
+                  <span className="stack-pill">GitHub</span>
+                  <span className="stack-pill">Node.js</span>
+                  <span className="stack-pill">PostgreSQL</span>
+                  <span className="stack-pill">ЮKassa</span>
+                  <span className="stack-pill">СДЭК API</span>
+                  <span className="stack-pill">Telegram API</span>
+                </div>
               </div>
             </div>
 
-            {/* Large Screenshot / Browser Mockup */}
+            {/* Large Screenshot / Browser Mockup with Single Explicit CTA */}
             <div className="drmix-mockup-wrapper">
               <DesktopBrowserMockup
                 landingUrl="https://dr-mix.ru/"
                 siteDomain="dr-mix.ru"
-                buttonLabel={isRu ? "Открыть сайт dr-mix.ru" : "Open dr-mix.ru"}
+                buttonLabel={isRu ? "Открыть dr-mix.ru ↗" : "Open dr-mix.ru ↗"}
                 imageSrc="/previews/drmix-preview.png"
                 imageAlt="Dr. Mix Production Preview"
                 directLinkLabel={isRu ? "Прямая ссылка:" : "Direct link:"}
               />
-            </div>
-
-            {/* Integrations Structured Badges */}
-            <div className="drmix-integrations-row">
-              <span className="integrations-lead">{isRu ? "Стек & Интеграции:" : "Stack & Integrations:"}</span>
-              <div className="drmix-integrations-chips">
-                <span className="drmix-chip">YooKassa</span>
-                <span className="drmix-chip">CDEK API</span>
-                <span className="drmix-chip">Retail CRM</span>
-                <span className="drmix-chip">Telegram Bot API</span>
-                <span className="drmix-chip">Node.js</span>
-                <span className="drmix-chip">GitHub</span>
-              </div>
-            </div>
-
-            {/* Expandable Architecture Details Toggle */}
-            <div className="drmix-details-accordion">
-              <button
-                type="button"
-                className="text-ghost-toggle-btn"
-                onClick={() => setShowDrMixDetails(!showDrMixDetails)}
-              >
-                <span>
-                  {showDrMixDetails
-                    ? (isRu ? "Скрыть технические детали" : "Hide technical details")
-                    : (isRu ? "Посмотреть детали архитектуры" : "View architecture details")}
-                </span>
-                {showDrMixDetails ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-              </button>
-
-              {showDrMixDetails && (
-                <div className="drmix-expanded-text animate-fade-in">
-                  <p>
-                    {isRu
-                      ? "Спроектировал каталог и корзину, разработал Node.js-бэкенд, связал эквайринг ЮKassa с проверкой криптографической подписи вебхуков, интегрировал расчёт тарифов СДЭК и реализовал мгновенные Telegram-оповещения о заказах."
-                      : "Designed catalog & checkout, developed Node.js backend, integrated YooKassa payments with webhook signatures, cached CDEK logistics calculations, and set up instant order dispatches to Telegram."}
-                  </p>
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -247,7 +219,7 @@ export function ProjectPage() {
           <div className="rezerv-clean-layout">
             <div className="case-meta-header">
               <span className="case-eyebrow-pill">
-                {isRu ? "Кросс-функциональные проекты" : "Cross-Functional Projects"}
+                {isRu ? "Кросс-функциональные проекты • ВЭД & Платформа" : "Cross-Functional Projects • Supply & Web"}
               </span>
               <span className="case-meta-pill">B2B / B2C & Global Supply</span>
             </div>
@@ -259,35 +231,25 @@ export function ProjectPage() {
                 </h2>
                 <p className="clean-case-tagline">
                   {isRu
-                    ? "Запуск веб-платформы rezerv.biz и сквозная координация импорта $100K+ с синхронизацией 7+ сторон."
-                    : "Launch of rezerv.biz platform and end-to-end coordination of $100K+ supply across 7+ stakeholders."}
+                    ? "Сквозное управление цепочкой поставок $100K+ и запуск платформы rezerv.biz: синхронизация 7 сторон без срывов сроков."
+                    : "End-to-end management of $100K+ supply and platform launch: 7 stakeholders aligned with zero delays."}
                 </p>
               </div>
-
-              <a
-                href="https://rezerv.biz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="apple-quiet-link-btn"
-              >
-                <span>rezerv.biz</span>
-                <ExternalLink size={14} />
-              </a>
             </div>
 
             {/* Proof Numbers */}
             <div className="rezerv-proof-numbers">
               <div className="proof-box">
                 <strong className="proof-val">$100K+</strong>
-                <span className="proof-lbl">{isRu ? "Международные проекты" : "International projects"}</span>
+                <span className="proof-lbl aligned-card-sublabel">{isRu ? "Международные поставки" : "International supply"}</span>
               </div>
               <div className="proof-box">
                 <strong className="proof-val">6000+</strong>
-                <span className="proof-lbl">{isRu ? "Единиц продукции доставлено" : "Units delivered"}</span>
+                <span className="proof-lbl aligned-card-sublabel">{isRu ? "Единиц продукции доставлено" : "Units delivered"}</span>
               </div>
               <div className="proof-box">
-                <strong className="proof-val">3–4</strong>
-                <span className="proof-lbl">{isRu ? "Параллельных стрима работы" : "Parallel workstreams"}</span>
+                <strong className="proof-val">7 сторон</strong>
+                <span className="proof-lbl aligned-card-sublabel">{isRu ? "Сквозная синхронизация" : "Cross-functional hub"}</span>
               </div>
             </div>
 
@@ -296,10 +258,10 @@ export function ProjectPage() {
               <StakeholderMap />
             </div>
 
-            {/* 4 Mini-Cases (Clean & Compact) */}
+            {/* 4 Mini-Cases (Clean, Compact, Aligned Baseline) */}
             <div className="rezerv-mini-cases-row">
               <div className="mini-case-cell">
-                <span className="cell-tag">{isRu ? "Логистика" : "Warehousing"}</span>
+                <span className="cell-tag aligned-card-sublabel">{isRu ? "Логистика" : "Warehousing"}</span>
                 <strong className="cell-title">{isRu ? "500+ фулфилментов" : "500+ Warehouses"}</strong>
                 <p className="cell-desc">
                   {isRu
@@ -309,17 +271,17 @@ export function ProjectPage() {
               </div>
 
               <div className="mini-case-cell">
-                <span className="cell-tag">{isRu ? "B2B продажи" : "B2B Channel"}</span>
+                <span className="cell-tag aligned-card-sublabel">{isRu ? "B2B продажи" : "B2B Channel"}</span>
                 <strong className="cell-title">{isRu ? "B2B с нуля" : "B2B From Zero"}</strong>
                 <p className="cell-desc">
                   {isRu
-                    ? "Упаковка оптового предложения, интерактивный прайс, первые продажи."
-                    : "Structured wholesale offer, catalog, initial commercial sales."}
+                    ? "Упаковка оптового предложения, интерактивный прайс, привлечение клиентов и первые контракты."
+                    : "Wholesale packaging, interactive catalog, customer acquisition, and first commercial contracts."}
                 </p>
               </div>
 
               <div className="mini-case-cell">
-                <span className="cell-tag">{isRu ? "Закупки" : "Sourcing"}</span>
+                <span className="cell-tag aligned-card-sublabel">{isRu ? "Закупки" : "Sourcing"}</span>
                 <strong className="cell-title">{isRu ? "Поиск фабрики (2x+ маржа)" : "Supplier Sourcing"}</strong>
                 <p className="cell-desc">
                   {isRu
@@ -329,7 +291,7 @@ export function ProjectPage() {
               </div>
 
               <div className="mini-case-cell">
-                <span className="cell-tag">{isRu ? "Блокеры" : "Unblocking"}</span>
+                <span className="cell-tag aligned-card-sublabel">{isRu ? "Блокеры" : "Unblocking"}</span>
                 <strong className="cell-title">{isRu ? "Таможенный кейс ТН ВЭД" : "Customs Clearance"}</strong>
                 <p className="cell-desc">
                   {isRu
@@ -339,12 +301,12 @@ export function ProjectPage() {
               </div>
             </div>
 
-            {/* Platform Showcase & CTA (Strict Normal Flow, Zero Overlap) */}
+            {/* Platform Showcase & Single CTA */}
             <div className="rezerv-preview-flow">
               <DesktopBrowserMockup
                 landingUrl="https://rezerv.biz/"
                 siteDomain="rezerv.biz"
-                buttonLabel={isRu ? "Открыть сайт rezerv.biz" : "Open rezerv.biz"}
+                buttonLabel={isRu ? "Открыть rezerv.biz ↗" : "Open rezerv.biz ↗"}
                 imageSrc="/previews/rezerv-preview.png"
                 imageAlt="REZERV Platform Preview"
                 directLinkLabel={isRu ? "Прямая ссылка:" : "Direct link:"}

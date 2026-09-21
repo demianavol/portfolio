@@ -36,21 +36,16 @@ export function DesktopBrowserMockup({
             <span className="address-domain">{siteDomain}</span>
             <span className="address-badge">LIVE</span>
           </div>
-
-          {/* Action icon */}
-          <a
-            href={landingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="browser-open-link-icon"
-            title={directLinkLabel === "Direct link:" ? "Open in new tab" : "Открыть в новой вкладке"}
-          >
-            <Globe size={14} />
-          </a>
         </div>
 
-        {/* Browser Content Screen */}
-        <div className="browser-screen-area">
+        {/* Browser Content Screen — Fully Clickable Preview */}
+        <a
+          href={landingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="browser-screen-link"
+          title={buttonLabel}
+        >
           <img
             src={imageSrc}
             alt={imageAlt}
@@ -59,21 +54,16 @@ export function DesktopBrowserMockup({
             decoding="async"
           />
           <div className="browser-screen-overlay">
-            <a
-              href={landingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="apple-browser-hover-link"
-            >
+            <span className="apple-browser-hover-link">
               <span>{buttonLabel}</span>
               <ExternalLink size={14} />
-            </a>
+            </span>
           </div>
-        </div>
+        </a>
       </div>
 
-      {/* Direct external CTA under the frame — strictly in normal document flow */}
-      <div className="browser-action-row">
+      {/* Single Explicit External CTA under the frame */}
+      <div className="browser-action-row single-cta-row">
         <a
           href={landingUrl}
           target="_blank"
@@ -83,12 +73,6 @@ export function DesktopBrowserMockup({
           <span>{buttonLabel}</span>
           <ExternalLink size={14} />
         </a>
-        <span className="browser-direct-link-text">
-          {directLinkLabel}{" "}
-          <a href={landingUrl} target="_blank" rel="noopener noreferrer">
-            {siteDomain || landingUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-          </a>
-        </span>
       </div>
     </div>
   );

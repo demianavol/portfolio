@@ -31,21 +31,18 @@ export function ProjectProofMetrics() {
       label: isRu ? "Подрядчиков и фабрик в базе" : "Vendors & factories analyzed",
       detail: isRu ? "Шортлист за 1–2 дня" : "Shortlisted in 1–2 days",
     },
-    {
-      value: "IT Park",
-      label: isRu ? "Статус резидента" : "Official Incubator Resident",
-      detail: isRu ? "Защита бизнес-модели" : "Defended business case",
-    },
   ];
 
   return (
     <div className="project-proof-metrics-container">
-      <div className="proof-metrics-grid-minimal">
+      <div className="proof-metrics-grid-minimal proof-metrics-five-cols">
         {metrics.map((item, idx) => (
           <div key={idx} className="proof-metric-item">
-            <span className="proof-metric-val">{item.value}</span>
-            <strong className="proof-metric-lbl">{item.label}</strong>
-            <span className="proof-metric-det">{item.detail}</span>
+            <div className="proof-metric-content">
+              <span className="proof-metric-val">{item.value}</span>
+              <strong className="proof-metric-lbl">{item.label}</strong>
+            </div>
+            <span className="proof-metric-det aligned-card-sublabel">{item.detail}</span>
           </div>
         ))}
       </div>

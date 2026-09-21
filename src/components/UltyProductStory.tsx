@@ -36,14 +36,20 @@ export function UltyProductStory() {
       {/* SUB-SECTION A: INTRO + SCREENSHOT + 3 PROOFS */}
       <div className="ulty-story-intro">
         <div className="ulty-intro-header">
-          <span className="section-eyebrow-text">
-            {isRu ? "Собственный продукт • Резидент IT Park" : "Proprietary Product • IT Park Resident"}
-          </span>
+          <div className="ulty-eyebrow-row">
+            <span className="itpark-credibility-pill">
+              <span className="itpark-dot" />
+              <span>{isRu ? "Официальный резидент IT Park" : "Selected IT Park Resident"}</span>
+            </span>
+            <span className="section-eyebrow-text">
+              {isRu ? "Собственный B2C-продукт" : "Proprietary B2C Product"}
+            </span>
+          </div>
           <h2 className="ulty-main-heading">UltyMyLife</h2>
           <p className="ulty-intro-tagline">
             {isRu
-              ? "От неструктурированной идеи до работающего продукта с 1600+ зарегистрированными пользователями."
-              : "From idea to a live product with 1,600+ registered users."}
+              ? "B2C-экосистема для ежедневной дисциплины: 8 модулей, Telegram Mini App и веб-платформа под ключ."
+              : "B2C habit & discipline ecosystem: 8 modules across Telegram Mini App and desktop web."}
           </p>
         </div>
 
@@ -52,7 +58,7 @@ export function UltyProductStory() {
           <DesktopBrowserMockup
             landingUrl="https://demianavol.github.io/ultymylife-landing/"
             siteDomain="ultymylife.com"
-            buttonLabel={isRu ? "Открыть сайт ultymylife.com" : "Open ultymylife.com"}
+            buttonLabel={isRu ? "Открыть UltyMyLife ↗" : "Open UltyMyLife ↗"}
             imageSrc="/previews/ultymylife-preview.png"
             imageAlt="UltyMyLife Live Production Platform"
             directLinkLabel={isRu ? "Прямая ссылка:" : "Direct link:"}
@@ -63,15 +69,15 @@ export function UltyProductStory() {
         <div className="ulty-three-proofs">
           <div className="proof-point">
             <strong className="proof-val">1600+</strong>
-            <span className="proof-lbl">{isRu ? "Пользователей в продукте" : "Registered users"}</span>
+            <span className="proof-lbl aligned-card-sublabel">{isRu ? "Пользователей в продукте" : "Registered users"}</span>
           </div>
           <div className="proof-point">
             <strong className="proof-val">~1 год</strong>
-            <span className="proof-lbl">{isRu ? "Непрерывной разработки" : "Continuous development"}</span>
+            <span className="proof-lbl aligned-card-sublabel">{isRu ? "Непрерывной разработки" : "Continuous development"}</span>
           </div>
           <div className="proof-point">
             <strong className="proof-val">8 модулей</strong>
-            <span className="proof-lbl">{isRu ? "Боевой production-релиз" : "Live production release"}</span>
+            <span className="proof-lbl aligned-card-sublabel">{isRu ? "Боевой production-релиз" : "Live production release"}</span>
           </div>
         </div>
       </div>
