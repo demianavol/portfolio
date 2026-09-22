@@ -12087,6 +12087,396 @@ body:has(.business-page-root) .site-footer {
   }
 }
 
+/* --------------------------------------------------------------------------
+   HR & VISITOR FEEDBACK FLOATING WIDGET (YouGile / Intercom style)
+   -------------------------------------------------------------------------- */
+.hr-feedback-widget-root {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  font-family: inherit;
+}
+
+.hr-feedback-trigger-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+/* Soft invitation badge */
+.hr-feedback-invite-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(20, 20, 24, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hr-feedback-invite-badge:hover {
+  background: rgba(28, 28, 34, 0.98);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.invite-badge-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #f5f5f7;
+}
+
+.invite-sparkle-icon {
+  color: #30d158;
+}
+
+.invite-badge-close {
+  background: none;
+  border: none;
+  color: #86868b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 50%;
+  transition: color 0.15s ease;
+}
+
+.invite-badge-close:hover {
+  color: #ffffff;
+}
+
+/* Floating Action Button (FAB) */
+.hr-feedback-fab {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #141416;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  outline: none;
+}
+
+.hr-feedback-fab:hover {
+  transform: scale(1.06);
+  background: #1c1c20;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+}
+
+.hr-feedback-fab.is-active {
+  background: #242429;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.fab-icon-msg {
+  color: #f5f5f7;
+}
+
+.fab-icon-close {
+  color: #f5f5f7;
+}
+
+.fab-online-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #30d158;
+  border: 2px solid #141416;
+  box-shadow: 0 0 6px rgba(48, 209, 88, 0.8);
+}
+
+/* Popup Dialog Surface */
+.hr-feedback-popup-surface {
+  position: absolute;
+  bottom: 66px;
+  right: 0;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  max-height: min(640px, calc(100vh - 100px));
+  overflow-y: auto;
+  background: rgba(18, 18, 21, 0.98);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.75);
+  padding: 22px;
+  box-sizing: border-box;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feedback-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.feedback-eyebrow-tag {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #86868b;
+  display: block;
+}
+
+.feedback-popup-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f5f5f7;
+  margin: 4px 0 0;
+  line-height: 1.25;
+}
+
+.feedback-popup-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a1a1a6;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.feedback-popup-close-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.feedback-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feedback-value-notice {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #a1a1a6;
+  margin: 0;
+}
+
+.feedback-value-notice p {
+  margin: 0;
+}
+
+.feedback-section-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-block-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #86868b;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.feedback-chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.feedback-chip-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 5px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #c8c8cc;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.feedback-chip-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.feedback-chip-btn.is-selected {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.32);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.feedback-textarea,
+.feedback-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #f5f5f7;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.feedback-textarea:focus,
+.feedback-input:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.feedback-textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.feedback-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 69, 58, 0.12);
+  border: 1px solid rgba(255, 69, 58, 0.25);
+  border-radius: 10px;
+  color: #ff453a;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.feedback-actions-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.feedback-submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 11px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.feedback-fallback-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 9px 14px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+/* Success State */
+.feedback-success-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 8px 8px;
+  gap: 12px;
+}
+
+.success-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(48, 209, 88, 0.15);
+  border: 1px solid rgba(48, 209, 88, 0.3);
+  color: #30d158;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f5f5f7;
+  margin: 0;
+}
+
+.success-text {
+  font-size: 13px;
+  color: #a1a1a6;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.success-close-btn {
+  width: 100%;
+  max-width: 200px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* Mobile responsive rules */
+@media (max-width: 480px) {
+  .hr-feedback-widget-root {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .hr-feedback-fab {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hr-feedback-invite-badge {
+    display: none; /* keep mobile bottom clean and unobtrusive */
+  }
+
+  .hr-feedback-popup-surface {
+    position: fixed;
+    inset: auto 12px 74px 12px;
+    width: auto;
+    max-width: none;
+    max-height: calc(100svh - 96px);
+    max-height: calc(100dvh - 96px);
+    border-radius: 18px;
+    padding: 18px;
+  }
+}
+
+
 
 
 

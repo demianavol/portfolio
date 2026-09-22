@@ -3,6 +3,7 @@ import { RouterProvider, useRouter } from "./router";
 import { SEO } from "./components/SEO";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { HRFeedbackWidget } from "./components/HRFeedbackWidget";
 import { HomePage } from "./pages/HomePage";
 import { ProjectPage } from "./pages/ProjectPage";
 import { ProductPage } from "./pages/ProductPage";
@@ -55,6 +56,7 @@ function AppContent() {
         {renderCurrentPage()}
       </main>
       <Footer />
+      <HRFeedbackWidget />
     </div>
   );
 }
